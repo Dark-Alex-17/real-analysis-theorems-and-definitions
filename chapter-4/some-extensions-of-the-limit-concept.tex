@@ -1,0 +1,93 @@
+\section{Some Extensions of the Limit Concept}
+
+\begin{definition}
+	Let $A \in \R$ and let $f:A \rightarrow \R$.
+	\begin{enumerate}
+		\item If $c \in \R$ is a cluster point of the set $A \cap (c, \infty)= \{x \in A: x > c\}$, then we say that $L \in \R$ is a \textbf{right-hand limit of $f$ at $c$} and we write
+		      \[\lim\limits_{x\to c^+} f=L\ \ \ \ \ \text{or}\ \ \ \ \ \lim\limits_{x\to c^+} f(x)=L\]
+		      if given any $\varepsilon>0$ there exists a $\delta = \delta(\varepsilon)>0$ such that for all $x \in A$ with $0 < x-c < \delta$, then $|f(x)-L|<\varepsilon$.
+
+		\item If $c \in \R$ is a cluster point of the set $A \cap (-\infty, c)=\{x \in A: x <c\}$, then we say that $L \in \R$ is a \textbf{left-hand limit of $f$ at $c$} and we write
+		      \[\lim\limits_{x\to c^-} f = L\ \ \ \ \ \text{or}\ \ \ \ \ \lim\limits_{x\to c^-} f(x)=L\]
+		      if given any $\varepsilon > 0$ there exists a $\delta >0$ such that for all $x \in A$ with $0 < c-x < \delta$, then $|f(x)-L|<\varepsilon$.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and let $c \in \R$ be a cluster point of $A \cap (c,\infty)$. Then the following statements are equivalent:
+	\begin{enumerate}
+		\item $\lim\limits_{x\to c^+} f = L$.
+
+		\item For every sequence $(x_n)$ that converges to $c$ such that $x_n \in A$ and $x_n > c$ for all $n \in \N$, the sequence $(f(x_n))$ converges to $L$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and let $c \in \R$ be a cluster point of both of the sets $A \cap(c,\infty)$ and $A \cap (-\infty, c)$. Then $\lim\limits_{x\to c} f = L$ if and only if $\lim\limits_{x\to c^+} f = L = \lim\limits_{x\to c^-} f$.
+\end{theorem}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and let $c \in \R$ be a cluster point of $A$.
+	\begin{enumerate}
+		\item We say that $f$ \textbf{tends to $\infty$ as $x \rightarrow c$}, and write
+		      \[\lim\limits_{x\to c} f = \infty\]
+		      if for every $\alpha \in \R$ there exists $\delta = \delta(\alpha) > 0$ such that for all $x \in A$ with $0 < |x-c|<\delta$, then $f(x) > \alpha$.
+
+		\item We say that $f$ \textbf{tends to $-\infty$ as $x \rightarrow c$}, and write
+		      \[\lim\limits_{x\to c} f = - \infty\]
+		      if for every $\beta \in \R$ there exists $\delta = \delta (\beta)>0$ such that for all $x \in A$ with $0 < |x-c|<\delta$, then $f(x)<\beta$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f,g:A \rightarrow \R$, and let $c \in \R$ be a cluster point of $A$. Suppose that $f(x) \leq g(x)$ for all $x \in A,\ x \neq c$.
+	\begin{enumerate}
+		\item If $\lim\limits_{x\to c} f = \infty$, then $\lim\limits_{x\to c} g = \infty$.
+		\item If $\lim\limits_{x\to c} g = -\infty$, then $\lim\limits_{x\to c} f = -\infty$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. If $c \in \R$ is a cluster point of the set $A \cap (c, \infty)= \{x \in A: x>c\}$, then we say that $f$ \textbf{tends to} $\infty$ [respectively, $-\infty$] as $x \rightarrow c^+$, and we write
+	\[\lim\limits_{x\to c^+} f = \infty\ \ \left[\text{respectively, } \lim\limits_{x\to c^+} f = -\infty\right]\]
+	if for every $\alpha \in \R$ there is $\delta = \delta(\alpha)>0$ such that for all $x \in A$ with $0 < x-c < \delta$, then $f(x)>\alpha$ [respectively, $f(x) < \alpha$]
+\end{definition}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. Suppose that $(a,\infty) \subseteq A$ for some $a \in \R$. We say that $L \in \R$ is a \textbf{limit of $f$ as $x \rightarrow \infty$}, and write
+	\[\lim\limits_{x\to \infty} f = L\ \ \ \ \text{or}\ \ \ \ \lim\limits_{x\to \infty} f(x) = L,\]
+	if given any $\varepsilon > 0$ there exists $K=K(\varepsilon)>\alpha$ such that for any $x > K$, then $|f(x) - L| < \varepsilon$.
+\end{definition}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and suppose that $(a,\infty) \subseteq A$ for some $ a \in \R$. Then the following statements are equivalent:
+	\begin{enumerate}
+		\item $L=\lim\limits_{x\to \infty} f$.
+		\item For every sequence $(x_n)$ in $A \cap (a, \infty)$ such that $\lim (x_n) = \infty$, the sequence $(f(x_n))$ converges to $L$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	let $A \subseteq \R$ and let $f: A \rightarrow \R$. Suppose that $(a,\infty)\subseteq A$ for some $a \in A$. We say that $f$ \textbf{tends to} $\infty$ [respectively, $ - \infty$] \textbf{as} $x \rightarrow \infty$, and write
+	\[\lim\limits_{x\to \infty} f = \infty \ \ \ \ \ \left[\text{respectively, } \lim\limits_{x\to \infty} f = - \infty \right]\]
+	if given any $\alpha \in \R$ there exists $K = K(\alpha)>\alpha$ such that for any $x > K$, then $f(x)>\alpha$ [respectively, $f(x) < \alpha$].
+\end{definition}
+
+\begin{theorem}
+	Let $A \in \R$, let $f:A \rightarrow \R$, and suppose that $(a, \infty) \subseteq A$ for some $a \in \R$. Then the following statements are equivalent:
+	\begin{enumerate}
+		\item $\lim\limits_{x\to \infty} = \infty$ [respectively, $\lim\limits_{x\to \infty} f = - \infty$]
+
+		\item For every sequence $(x_n)$ in $(a, \infty)$ such that $\lim (x_n) = \infty$, then $\lim (f(x_n)) = \infty$ [respectively, $\lim (f(x_n)) = - \infty$].
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $A \subseteq \R$, let $f,g:A \rightarrow \R$, and suppose that $(a,\infty) \subseteq A$ for some $a \in \R$. Suppose further that $g(x) > 0$ for all $x > a$ and that for some $L \in \R,\ L \neq 0$, we have
+	\[\lim\limits_{x\to \infty} \frac{f(x)}{g(x)} = L.\]
+	\begin{enumerate}
+		\item If $L > 0$, then $ \lim\limits_{x\to \infty} f = \infty$ if and only if $\lim\limits_{x\to \infty} g = \infty$.
+
+		\item If $L < 0$, then $\lim\limits_{x\to \infty} f = -\infty$ if and only if $\lim\limits_{x\to \infty} g = \infty$.
+	\end{enumerate}
+\end{theorem}

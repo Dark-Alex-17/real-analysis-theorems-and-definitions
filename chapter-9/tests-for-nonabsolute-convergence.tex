@@ -1,0 +1,22 @@
+\section{Tests for Nonabsolute Convergence}
+
+\begin{definition}
+	A sequence $X:=(x_n)$ of nonzero real numbers is said to be \textbf{alternating} if the terms $(-1)^{n+1}$, $n \in \N$, are all positive (or all negative) real numbers. If the sequence $X:=(x_n)$ is alternative, we say that the series $\sum x_n$ it generates is an \textbf{alternating series}.
+\end{definition}
+
+\begin{theorem}[\textbf{Alternating Series Test}]
+	Let $Z:=(z_n)$ be a decreasing sequence of strictly positive numbers with $\lim (z_n)=0$. Then the alternating series $\sum (-1)^{n+1} z_n$ is convergent.
+\end{theorem}
+
+\begin{lemma}[\textbf{Abel's Lemma}]
+	Let $X:=(x_n)$ and $Y:=(y_n)$ be sequences in $\R$ and let the partial sums of $\sum y_n$ be denoted by $(s_n)$ with $s_0:=0$. If $m >n$, then
+	\[\sum\limits_{k=n+1}^{m}x_ky_k=(x_ms_m-x_{n+1}s_n)+\sum\limits_{k=n+1}^{m-1}(x_k-x_{k+1})s_k\]
+\end{lemma}
+
+\begin{theorem}[\textbf{Dirichlet's Test}]
+	If $X:=(x_n)$ is a decreasing sequence with $\lim x_n=0$, and if the partial sums $(s_n)$ of $\sum y_n$ are bounded, then the series $\sum x_ny_n$ is convergent.
+\end{theorem}
+
+\begin{theorem}[\textbf{Abel's Test}]
+	If $X:=(x_n)$ is a convergent monotone sequence and the series $\sum y_n$ is convergent, then the series $\sum x_ny_n$ is also convergent.
+\end{theorem}

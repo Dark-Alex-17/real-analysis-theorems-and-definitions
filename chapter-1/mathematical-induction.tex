@@ -1,0 +1,35 @@
+\section{Mathematical Induction}
+
+\begin{theorem}[\textbf{Well-Ordering Property of $\N$}]
+	Every nonempty subset of $\N$ has a least element.
+\end{theorem}
+A more detailed statement of this property is as follows: If $S$ is a subset of $\N$ and if $S \neq \emptyset$, then there exists $m \in S$ such that $m \leq k$ for all $k \in S$.
+
+\begin{theorem}[\textbf{Principle of Mathematical Induction}]
+	Let $S$ be a subset of $\N$ that possesses the two properties:
+	\begin{enumerate}
+		\item The number $1 \in S$.
+		\item For every $k \in \N$, if $k \in S$, then $k + 1 \in S$.
+	\end{enumerate}
+	Then we have $S = \N$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Principle of Mathematical Induction (second version)}]
+	Let $n_0 \in \N$ and let $P(n)$ be a statement for each natural number $n \geq n_0$. Suppose that:
+	\begin{enumerate}
+		\item The statement $P(n_0)$ is true.
+
+		\item For all $k \geq n_0$, the truth of $P(k)$ implies the truth of $P(k+1)$.
+	\end{enumerate}
+	Then $P(n)$ is true for all $n \geq n_0$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Principle of Strong Induction}]
+	Let $S$ be a subset of $\N$ such that
+	\begin{enumerate}
+		\item $1 \in S$.
+
+		\item For every $k \in \N$, if $\{1, 2, \dots \} \subseteq S$, then $k+1 \in S$.
+	\end{enumerate}
+	Then $S = \N$.
+\end{theorem}

@@ -1,0 +1,54 @@
+\section{Riemann Integrable Functions}
+
+\begin{theorem}[\textbf{Cauchy Criterion}]
+	A function: $[a,b] \to \R$ belongs to $\mathcal{R}[a,b]$ if and only if for every $\varepsilon >0$ there exists $\eta_\varepsilon > 0$ such that if $\dot{\mathcal{P}}$ and $\dot{\mathcal{Q}}$ are any tagged partitions of $[a,b]$ with $||\dot{\mathcal{P}}||<\eta_\varepsilon$ and $||\dot{\mathcal{Q}}||<\eta_\varepsilon$, then
+	\[|S(f;\dot{\mathcal{P}})-S(f;\dot{\mathcal{Q}})|<\varepsilon\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Squeeze Theorem}]
+	Let $f:[a,b] \to \R$. Then $f \in \mathcal{R}[a,b]$ if and only if for every $\varepsilon>0$ there exist functions $\alpha_\varepsilon$ and $\omega_\varepsilon$ in $\mathcal{R}[a,b]$ with
+	\[\alpha_\varepsilon(x) \leq f(x) \leq \omega_\varepsilon(x)\ \forall\ x \in [a,b]\]
+	and such that
+	\[\displaystyle\int_{a}^{b}(\omega_\varepsilon-\alpha_\varepsilon)<\varepsilon\]
+\end{theorem}
+
+\begin{lemma}
+	If $J$ is a subinterval of $[a,b]$ having endpoints $c < d$ and if $\varphi_J(x):=1$ for $x \in J$ and $\varphi_J(x):=0$ elsewhere in $[a,b]$, then $\varphi_J \in \mathcal{R}[a,b]$ and $\displaystyle\int_{a}^{b}\varphi_J=d-c$.
+\end{lemma}
+
+\begin{theorem}
+	If $\varphi:[a,b] \to \R$ is a step function, then $\varphi \in \mathcal{R}[a,b]$.
+\end{theorem}
+
+\begin{theorem}
+	If $f:[a,b] \to \R$ is continuous on $[a,b]$, then $f \in \mathcal{R}[a,b]$.
+\end{theorem}
+
+\begin{theorem}
+	If $f:[a,b]\to\R$ is monotone on $[a,b]$, then $f \in \mathcal{R}[a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Additivity Theorem}]
+	Let $f:=[a,b] \to \R$ and let $c \in (a,b)$. Then $f \in \mathcal{R}[a,b]$ if and only if its restrictions to $[a,c]$ and $[c,b]$ are both Riemann integrable. In this case
+	\[\displaystyle\int_{a}^{b}f=\displaystyle\int_{a}^{c}f+\displaystyle\int_{c}^{b}f\]
+\end{theorem}
+
+\begin{corollary}
+	If $f \in \mathcal{R}[a,b]$, and if $[c,d]\subseteq [a,b]$, then the restriction of $f$ to $[c,d]$ is in $\mathcal{R}[c,d]$.
+\end{corollary}
+
+\begin{corollary}
+	If $f \in \mathcal{R}[a,b]$ and if $a=c_0<c_1<\dots<c_m=b$, then the restrictions of $f$ to each of the subintervals $[c_{i-1},c_i]$ are Riemann integrable and
+	\[\displaystyle\int_{a}^{b}f=\sum\limits_{i=1}^{m}\displaystyle\int_{c_{i-1}}^{c_i}f\]
+\end{corollary}
+
+\begin{definition}
+	If $f \in \mathcal{R}[a,b]$ and if $\alpha, \beta \in [a,b]$ with $\alpha < \beta$, we define
+	\[\displaystyle\int_{\beta}^{\alpha}f:=-\displaystyle\int_{\alpha}^{\beta}f\ \text{  and  }\ \displaystyle\int_{\alpha}^{\alpha}f:=0\]
+\end{definition}
+
+\begin{theorem}
+	If $f \in \mathcal{R}[a,b]$ and if $\alpha,\beta,\gamma$ are any numbers in $[a,b]$, then
+	\[\displaystyle\int_{\alpha}^{\beta}f=\displaystyle\int_{\alpha}^{\gamma}f+\displaystyle\int_{\gamma}^{\beta}f\]
+	in the sense that the existence of any two of these integrals implies the existence of the third integral and the equality.
+\end{theorem}

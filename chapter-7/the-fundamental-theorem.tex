@@ -1,0 +1,82 @@
+\section{The Fundamental Theorem}
+
+\begin{theorem}[\textbf{Fundamental Theorem of Calculus (First Form)}]
+	Suppose there is a \textbf{finite} set $E$ in $[a,b]$ and functions $f,F:=[a,b] \to \R$ such that
+	\begin{enumerate}
+		\item $F$ is continuous on $[a,b]$,
+
+		\item $F'(x)=f(x)$ for all $x \in [a,b]\setminus E$,
+
+		\item $f$ belongs to $\mathcal{R}[a,b]$.
+	\end{enumerate}
+	Then we have
+	\[\displaystyle\int_{a}^{b}f=F(b)-F(a)\]
+\end{theorem}
+
+\begin{remark}
+	If the function $F$ is differentiable at every point of $[a,b]$, then (by \textit{Theorem 6.1.2}) hypothesis (a) is automatically satisfied. If $f$ is not defined for some point $c \in E$, we take $f(c):=0$. Even if $F$ is differentiable at every point of $[a,b]$, condition (c) is \textit{not automatically satisfied}, since there exists functions $F$ such that $F'$ is not Riemann integrable.
+\end{remark}
+
+\begin{definition}
+	If $f \in \mathcal{R}[a,b]$, then the function defined by
+	\[F(z):=\displaystyle\int_{a}^{z}f\ \text{for}\ z \in [a,b]\]
+	is called the \textbf{indefinite integral} of $f$ with \textbf{basepoint} $a$. (sometimes a point other than $a$ is used as a basepoint)
+\end{definition}
+
+\begin{theorem}
+	The indefinite integral $F$ defined by the above definition is continuous on $[a,b]$. In fact, if $|f(x)|\leq M$ for all $ x \in [a,b]$, then $|F(z)-F(w)|\leq M|z-w|$ for all $z,w \in [a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Fundamental Theorem of Calculus (Second Form)}]
+	Let $f \in \mathcal{R}[a,b]$ and let $f$ be continuous at a point $c \in [a,b]$. Then the indefinite integral, defined by \textit{Definition 7.3.1}, is differentiable at $c$ and $F'(c)=f(c)$.
+\end{theorem}
+
+\begin{theorem}
+	If $f$ is continuous on $[a,b]$, then the indefinite integral $F$, defined by \textit{Definition 7.3.1}, is differentiable on $[a,b]$, and $F'(x)=f(x)$ for all $x \in [a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Substitution Theorem}]
+	Let $J:=[\alpha, \beta]$ and let $\varphi:J\to\R$ have a continuous derivative on $J$. If $f:I\to\R$ is continuous on an interval $I$ containing $\varphi(J)$, then
+	\[\displaystyle\int_{\alpha}^{\beta}f(\varphi(t))\cdot\varphi'(t)dt=\displaystyle\int_{\varphi(\alpha)}^{\varphi(\beta)}f(x)dx\]
+\end{theorem}
+
+\begin{definition}
+
+	\begin{enumerate}
+		\item A set $Z \subset \R$ is said to be a \textbf{null set} if for every $\varepsilon>0$ there exists a countable collection $\{(a_k,b_k)\}_{k=1}^\infty$ of open intervals such that
+		      \[Z \subseteq \bigcup_{k=1}^{\infty}(a_k,b_k)\ \text{and}\ \sum\limits_{k=1}^{\infty}(b_k-a_k)\leq \varepsilon\]
+
+		\item If $Q(x)$ is a statement about the point $x \in I$, we say that $Q(x)$ holds \textbf{almost everywhere} on $I$ (or for \textbf{almost every} $x \in I$), if there exists a null set $Z \subset I$ such that $Q(x)$ holds for all $x \in I\setminus Z$. In this case, we may write
+		      \[Q(x)\ \text{for a.e. (almost everywhere)}\ x \in I\]
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}[\textbf{Lebesgue's Integrability Criterion}]
+	A bounded function $f:[a,b] \to \R$ is Riemann integrable if and only if it is continuous almost everywhere on $[a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Composition Theorem}]
+	Let $f \in \mathcal{R}[a,b]$ with $f([a,b])\subseteq [c,d]$ and let $\varphi:[c,d] \to \R$ be continuous. Then the composition $\varphi \circ f$ belongs to $\mathcal{R}[a,b]$.
+\end{theorem}
+
+\begin{corollary}
+	Suppose that $f \in \mathcal{R}[a,b]$. Then its absolute value $|f|$ is in $\mathcal{R}[a,b]$, and
+	\[\left|\displaystyle\int_{a}^{b}f\right|\leq\displaystyle\int_{a}^{b}|f|\leq M(b-a),\]
+	where $|f(x)|\leq M$ for all $x \in [a,b]$.
+\end{corollary}
+
+\begin{theorem}[\textbf{The Product Theorem}]
+	If $f$ and $g$ belong to $\mathcal{R}[a,b]$, then the product $fg$ belongs to $\mathcal{R}[a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Integration by Parts}]
+	Let $F,G$ be differentiable on $[a,b]$ and let $f:=F'$ and $g:=G'$ belong to $\mathcal{R}[a,b]$. Then
+	\[\left.\displaystyle\int_{a}^{b}fG=FG\ \right|_a^b-\displaystyle\int_{a}^{b}Fg\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Taylor's Theorem with the Remainder}]
+	Suppose that $f',\dots,f^{(n)},f^{(n+1)}$ exist on $[a,b]$ and that $f^{(n+1)} \in \mathcal{R}[a,b]$. Then we have
+	\[f(b)=f(a)+\frac{f'(a)}{1!}(b-a)+\dots+\frac{f^{(n)}(a)}{n!}(b-a)^n+R_n,\]
+	where the remainder is given by
+	\[R_n=\frac{1}{n!}\displaystyle\int_{a}^{b}f^{(n+1)}(t)\cdot(b-t)^n dt\]
+\end{theorem}

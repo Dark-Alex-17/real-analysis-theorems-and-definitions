@@ -1,0 +1,77 @@
+\section{Sets and Functions}
+
+\begin{definition}
+	Two sets $A$ and $B$ are said to be \textbf{equal,} and we write $A=B$ if they contain the same elements.
+	\\\\Thus, to prove that the sets $A$ and $B$ are equal, we must show that
+	\[A \subseteq B \text{ and } B \subseteq A\]
+\end{definition}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item The \textbf{union} of sets $A$ and $B$ is the set
+		      \[A \cup B := \{x:x \in A \text{ or } x \in B\}.\]
+
+		\item The \textbf{intersection} of the sets $A$ and $B$ is the set
+		      \[A \cap B := \{x:x \in A \text{ and } x \in B \}.\]
+
+		\item The \textbf{complement of $B$ relative to $A$} is the set
+		      \[A \setminus B := \{x:x \in A \text{ and } x \notin B\}\]
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	If $A$, $B$, $C$ are sets, then
+	\begin{enumerate}
+		\item $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C),$
+		\item $A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C).$
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	If $A$ and $B$ are nonempty sets, then the \textbf{Cartesian product} $A \times B$ of $A$ and $B$ is the set of all ordered pairs $(a,b)$ with $a \in A$ and $b \in B$. That is,
+	\[A \times B := \{(a,b): a \in A,\ b \in B\}.\]
+\end{definition}
+
+\begin{definition}
+	Let $A$ and $B$ be sets. Then a \textbf{function} from $A$ to $B$ is a set $f$ of ordered pairs in $A \times B$ such that for each $a \in A$ there exists a unique $B \in B$ with $(a,b) \in f$. (In other words, if $(a,b) \in f$ and $(a, b') \in f$, then $b = b'$.)
+\end{definition}
+
+\begin{definition}
+	If $E$ is a subset of $A$, then the \textbf{direct image} of $E$ under $f$ is the subset $f(E)$ of $B$ given by
+	\[f(E):=\{f(x):x \in E\}\]
+
+	If $H$ is a subset of $B$, then the \textbf{inverse image} of $H$ under $f$ is the subset $f^{-1}(H)$ of $A$ given by
+	\[f^{-1}(H):=\{x \in A:f(x) \in H\}\]
+\end{definition}
+
+\begin{definition}
+	Let $f:A \rightarrow B$ be a function from $A$ to $B$.
+	\begin{enumerate}
+		\item The function $f$ is said to be \textbf{injective} (or to be \textbf{one-one}) if whenever $x_1 \neq x_2$, then $f(x_1) \neq f(x_2)$. If $f$ is an injective function, we also say that $f$ is an \textbf{injection}.
+
+		\item The function $f$ is said to be \textbf{surjective} (or to map $A$ \textbf{onto} $B$) if $f(A)=B$; that is, if the range $R(f)=B$. If $f$ is a surjective function, we also say that $f$ is a \textbf{surjection}.
+
+		\item If $f$ is both injective and surjective, then $f$ is said to be \textbf{bijective}. If $f$ is bijective, we also say that $f$ is a \textbf{bijection}.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	If $f: A \rightarrow B$ is a bijection of $A$ onto $B$, then
+	\[g := \{(b,a) \in B \times A: (a,b) \in f\}\]
+	is a function on $B$ into $A$. This function is called the \textbf{inverse function} of $f$, and is denoted by $f^{-1}$. The function $f^{-1}$ is also called the \textbf{inverse} of $f$.
+	\\We can also express the connection between $f$ and its inverse $f^{-1}$ by noting that $D(f)=R(f^{-1})$ and $R(f)=D(f^{-1})$ and that
+	\[b=f(a) \text{ if and only if } a=f^{-1}(b)\]
+\end{definition}
+
+\begin{definition}
+	If $f: A \rightarrow B$ and $g:B \rightarrow C$, and if $R(f) \subseteq D(g) = B$, then the \textbf{composite function} $g \circ f$ (note the order!) is the function from $A$ into $C$ defined by
+	\[(g \circ f)(x) := g(f(x)) \text{ for all } x \in A\]
+\end{definition}
+
+\begin{theorem}
+	Let $f: A \rightarrow B$ and $g: B \rightarrow C$ be functions and let $H$ be a subset of $C$. Then we have
+	\[(g \circ f)^{-1}(H) = f^{-1}(g^{-1}(H)).\]
+
+	Note the reversal in the order of the functions.
+\end{theorem}

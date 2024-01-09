@@ -1,0 +1,113 @@
+\section{The Algebraic and Order Properties of $\R$}
+
+\begin{theorem}[\textbf{Algebraic Properties of $\R$}]
+	On the set $\R$ of real numbers there are two binary operations, denoted by $+$ and $\cdot$ and called \textbf{addition} and \textbf{multiplication}, respectively. These operations satisfy the following properties:
+	\begin{enumerate}
+		\item[(A1)] $a+b=b+a\ \forall\ a,b \in \R$. (\textit{commutative property of addition});
+
+		\item[(A2)] $(a+b)+c=a+(b+c)\ \forall\ a,b,c \in \R$ (\textit{associative property of addition});
+
+		\item[(A3)] There exists and element $0$ in $\R$ such that $0+a=a$ and $a+0=a$ for all $a \in \R$ (\textit{existence of a zero element});
+
+		\item[(A4)] for each $a \in \R$ there exists and element $-a \in \R$ such that $a + (-a)=0$ and $(-a) + a=0$ (\textit{existence of negative elements});
+
+		\item[(M1)] $a \cdot b=b \cdot a\ \forall\ a,b \in \R$ (\textit{commutative property of multiplication});
+
+		\item[(M2)] $(a \cdot b) \cdot c = a \cdot (b \cdot c)\ \forall\ a,b,c \in \R$ (\textit{associative property of multiplication});
+
+		\item[(M3)] There exists an element $1 \in \R$ \textit{distinct from} $0$ such that $1 \cdot a=a$ and $a \cdot 1 = a\ \forall\ a \in \R$ (\textit{existence of a unit element});
+
+		\item[(M4)] for each $a \neq 0 \in \R$, there exists an element $1/a \in \R$ such that $a \cdot (1/a) = 1$ and $(1/a) \cdot a = 1$ (\textit{existence of reciprocals});
+
+			\item[(D)]$a \cdot (b+c)=(a \cdot b) + (a \cdot c)$ and $(b+c)\cdot a = (b \cdot a) + (c \cdot a)\ \forall\ a,b,c \in \R$ (\textit{distributive property of multiplication over addition}).
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item[]
+		\item If $z$ and $a$ are elements in $\R$ with $z+a=a$, then $z=0$.
+
+		\item If $u$ and $b \neq 0$ are elements in $\R$ with $u \cdot b=b$, then $u=1$.
+
+		\item If $a \in \R$, then $a \cdot 0=0$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item[]
+		\item If $a \neq 0$ and $b \in \R$ are such that $a \cdot b = 1$, then $b = 1/a$.
+
+		\item If $a \cdot b = 0$, then either $a=0$ or $b=0$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	There does not exists a rational number $r$ such that $r^2=2$.
+\end{theorem}
+
+\begin{definition}[\textbf{The Order Properties of $\R$}]
+	There is a nonempty subset $\mathbb{P}$ of $\R$, called the set of \textbf{positive real numbers}, that satisfies the following properties:
+	\begin{enumerate}
+		\item If $a,b$ belong to $\mathbb{P}$, then $a+b$ belongs to $\mathbb{P}$.
+
+		\item If $a,b$ belong to $\mathbb{P}$, then $ab$ belongs to $\mathbb{P}$.
+
+		\item If $a$ belongs to $\R$, then exactly one of the following holds:
+		      \[a \in \mathbb{P},\ \ \ \ a=0,\ \ \ \ -a \in \mathbb{P}\]
+		      (This condition is usually called the \textbf{Trichotomy Property}.)
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	Let $a,b$ be elements of $\R$.
+	\begin{enumerate}
+		\item If $a-b \in \mathbb{P}$, then we write $a >b$ or $b < a$.
+		\item If $a-b \in \mathbb{P} \cup \{0\}$, then we write $a \geq b$ or $b \leq a$.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	Let $a,b,c$ be any elements of $\R$.
+	\begin{enumerate}
+		\item If $a>b$ and $b>c$, then $a>c$.
+		\item If $a>b$, then $a+c>b+c$.
+		\item If $a>b$ and $c>0$, then $ca>cb$.
+		      \\If $a>b$ and $c<0$, then $ca<cb$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item[]
+		\item If $a \in \R$ and $a \neq 0$, then $a^2>0$.
+		\item $1 >0$.
+		\item If $n \in \N$, then $n >0$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $a \in \R$ is such that $0 \leq a < \varepsilon$ for every $\varepsilon>0$, then $a=0$.
+\end{theorem}
+
+\begin{theorem}
+	If $ab>0$, then either
+	\begin{enumerate}
+		\item $a>0$ and $b>0$, or
+		\item $a<0$ and $b<0$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	If $ab <0$, then either
+	\begin{enumerate}
+		\item $a<0$ and $b>0$, or
+		\item $a>0$ and $b<0$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}[\textbf{Bernoulli's Inequality}]
+	If $x>-1$, then
+	\[(1+x)^n \geq 1+nx\ \forall\ n \in \N\]
+\end{definition}

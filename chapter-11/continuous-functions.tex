@@ -1,0 +1,35 @@
+\section{Continuous Functions}
+
+\begin{lemma}
+	A function $f:A \to \R$ is continuous at the point $c$ in $A$ if and only if for every neighborhood $U$ of $f(c)$, there exists a neighborhood $V$ of $c$ such that if $x \in V\cap A$, then $f(x) \in U$.
+\end{lemma}
+
+\begin{theorem}[\textbf{Global Continuity Theorem}]
+	Let $A \subseteq \R$ and let $f:A \to \R$ be a function with domain $A$. Then the following are equivalent:
+	\begin{enumerate}
+		\item $f$ is continuous at every point of $A$.
+		\item For every open set $G$ in $\R$, there exists an open set $H$ in $\R$ such that $H \cap A=f^{-1}(G)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	A function $f:\R\to\R$ is continuous if and only if $f^{-1}(G)$ is open in $\R$ whenever $G$ is open.
+\end{corollary}
+
+\begin{theorem}[\textbf{Preservation of Compactness}]
+	If $K$ is a compact subset of $\R$ and if $f:K \to \R$ is continuous on $K$, then $f(K)$ is compact.
+\end{theorem}
+
+\begin{theorem}
+	If $K$ is a compact subset of $\R$ and $f:K \to \R$ is injective and continuous, then $f^{-1}$ is continuous on $f(K)$.
+\end{theorem}
+
+\begin{theorem}
+	Let $f:A \subseteq \R \to \R$. Then the following are equivalent:
+	\begin{enumerate}
+		\item $f$ is continuous on $A$
+		\item \textit{Theorem 5.1.3:} $\forall$ converging sequences $x_n \to a \in A$, then $f(x_n) \to f(a)$
+		\item \textit{Theorem 11.3.2:} For each open set $U \subseteq \R$, $f^{-1}(U) \subseteq A$ is open relative to $A$. (i.e. inverse images of open sets are relatively open to $A$. $f^{-1}(U)=V \cap A$ for some open set $V \subseteq \R$)
+		\item For each closed set $F \subseteq \R$, then $f^{-1}(F) \subseteq A$ is closed relative to $A$. (i.e. inverse images of closed sets are relatively closed)
+	\end{enumerate}
+\end{theorem}

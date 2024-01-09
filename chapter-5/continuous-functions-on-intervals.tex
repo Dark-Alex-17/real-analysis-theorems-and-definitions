@@ -1,0 +1,43 @@
+\section{Continuous Functions on Intervals}
+
+\begin{definition}
+	A function $f:A \rightarrow \R$ is said to be \textbf{bounded on} $A$ if there exists a constant $M > 0$ such that $|f(x)| \leq M$ for all $x \in A$.
+\end{definition}
+
+\begin{theorem}[\textbf{Boundedness Theorem}]
+	Let $I:=[a,b]$ be a closed bounded interval and let $f: I \rightarrow \R$ be continuous on $I$. Then $f$ is bounded on $I$.
+\end{theorem}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. We say that $f$ \textbf{has an absolute maximum} on $A$ if there is a point $x^* \in A$ such that
+	\[f(x^*) \geq f(x)\ \ \ \ \text{for all}\ \ \ \ x \in A.\]
+	We say that $f$ \textbf{has an absolute minimum} on $A$ if there is a point $x_* \in A$ such that
+	\[f(x_*) \leq f(x)\ \ \ \ \text{for all}\ \ \ \ x \in A.\]
+	We say that $x^*$ is an \textbf{absolute maximum point} for $f$ on $A$, and that $x_*$ is an \textbf{absolute minimum point} for $f$ on $A$, if they exist.
+\end{definition}
+
+\begin{theorem}[\textbf{Maximum-Minimum Theorem}]
+	Let $I := [a,b]$ be a closed bounded interval and let $f: I \rightarrow \R$ be continuous on $I$. Then $f$ has an absolute maximum and an absolute minimum on $I$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Location of Roots Theorem}]
+	Let $I=[a,b]$ and let $f:I \rightarrow \R$ be continuous on $I$. If $f(a) < 0 < f(b)$, or if $f(a) > 0 > f(b)$, then there exists a number $c \in (a,b)$ such that $f(c)=0$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Bolzano's Intermediate Value Theorem}]
+	Let $I$ be an interval and let $f:I \rightarrow \R$ be continuous on $I$. If $a,b \in I$ and if $k \in \R$ satisfies $f(a) < k<f(b)$, then there exists a point $c \in I$ between $a$ and $b$ such that $f(c) = k$.
+\end{theorem}
+
+\begin{corollary}
+	Let $I=[a,b]$ be a closed, bounded interval and let $f:I \rightarrow \R$ be on $I$. If $k \in \R$ is any number satisfying
+	\[\inf f(I) \leq k \leq \sup f(I),\]
+	then there exists a number $c \in I$ such that $f(c) = k$.
+\end{corollary}
+
+\begin{theorem}
+	Let $I$ be a closed bounded interval and let $f:I \rightarrow \R$ be continuous on $I$. Then the set $f(I):= \{f(x): x \in I\}$ is a closed bounded interval.
+\end{theorem}
+
+\begin{theorem}[\textbf{Preservation of Intervals Theorem}]
+	Let $I$ be an interval and let $f: I \rightarrow \R$ be continuous on $I$. Then the set $f(I)$ is an interval.
+\end{theorem}

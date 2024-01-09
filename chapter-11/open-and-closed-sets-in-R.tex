@@ -1,0 +1,49 @@
+\section{Open and Closed Sets in $\R$}
+
+\begin{definition}
+	A \textbf{neighborhood} of a point $x \in \R$ is any set $V$ that contains an $\varepsilon$-neighborhood $V_\varepsilon(x):=(x-\varepsilon,x+\varepsilon)$ of $x$ for some $\varepsilon>0$.
+\end{definition}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item A subset $G$ of $\R$ is \textbf{open} in $\R$ if for each $x \in G$ there exists a neighborhood $V$ of $x$ such that $V \subseteq G$.
+		\item A subset $F$ of $\R$ is \textbf{closed in $\R$} if the complement $\mathcal{C}(F):=\R\setminus F$ is open in $\R$.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}[\textbf{Open Set Properties}]
+	\begin{enumerate}
+		\item[]
+		\item The union of an arbitrary collection of open subsets in $\R$ is open.
+		\item The intersection of any finite collection of open sets in $\R$ is open.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Closed Set Properties}]
+	\begin{enumerate}
+		\item[]
+		\item The intersection of an arbitrary collection of closed sets in $\R$ is closed.
+		\item The union of any finite collection of closed sets in $\R$ is closed.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Characterization of Closed Sets}]
+	Let $F \subset \R$; then the following assertions are equivalent:
+	\begin{enumerate}
+		\item $F$ is a closed subset of $\R$.
+		\item If $X=(x_n)$ is any convergent sequence of elements in $F$, then $\lim X$ belongs to $F$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	A subset of $\R$ is closed if and only if it contains all of its cluster points.
+\end{theorem}
+
+\begin{theorem}
+	A subset of $\R$ is open if and only if it is the union of countably many disjoint open intervals in $\R$.
+\end{theorem}
+
+\begin{definition}
+	The \textbf{Cantor Set} $\mathbb{F}$ is the intersection of the sets $F_n, n\in\N$, obtained by successive removal of open middle thirds, starting with $[0,1]$.
+\end{definition}

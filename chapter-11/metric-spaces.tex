@@ -1,0 +1,52 @@
+\section{Metric Spaces}
+
+\begin{definition}
+	A \textbf{metric} on a set $S$ is a function $d:S \times S \to \R$ that satisfies the following properties:
+	\begin{enumerate}
+		\item $d(x,y)\geq 0\ \forall\ x,y\in S$ \textit{(positivity)};
+		\item $d(x,y)=0$ if and only if $x=y$ \textit{(definiteness)};
+		\item $d(x,y)=d(y,x)\ \forall\ x,y \in S$ \textit{(symmetry)};
+		\item $d(x,y)\leq d(x,z)+d(z,y)\ \forall\ x,y,z\in S$ \textit{(triangle inequality)}
+	\end{enumerate}
+	A \textbf{metric space} $(S,d)$ is a set $S$ together with a metric $d$ on $S$.
+\end{definition}
+
+\begin{definition}
+	Let $(S,d)$ be a metric space. Then for $\varepsilon>0$, the $\varepsilon$\textbf{-neighborhood} of a point $x_0$ in $S$ is the set
+	\[V_\varepsilon(x_0):=\{x \in S :d(x_0,x)<\varepsilon\}\]
+	A \textbf{neighborhood} of $x_0$ is any set $U$ that contains an $\varepsilon$-neighborhood of $x_0$ for some $\varepsilon>0$.
+\end{definition}
+
+\begin{definition}
+	Let $(x_n)$ be a sequence in the metric space $(S,d)$. The sequence $(x_n)$ is said to \textbf{converge} to $x$ in $S$ if for any $\varepsilon>0$, there exists $K \in \N$ such that $x_n \in V_\varepsilon(x)$ for all $n \geq K$.
+\end{definition}
+
+\begin{definition}
+	Let $(S,d)$ be a metric space. A sequence $(x_n)$ in $S$ is said to be a \textbf{Cauchy sequence} if for each $\varepsilon>0$, there exists $H \in \N$ such that $d(x_n,x_m)<\varepsilon$ for all $n,m \geq H$.
+\end{definition}
+
+\begin{definition}
+	A metric space $(S,d)$ is said to be \textbf{complete} if each Cauchy sequence in $S$ converges to a point of $S$.
+\end{definition}
+
+\begin{definition}
+	Let $(S,d)$ be a metric space. A subset $G$ of $S$ is said to be an \textbf{open} set in $S$ if for every point $x \in S$ there is a neighborhood $U$ of $x$ such that $U \subseteq G$. A subset $F$ of $S$ is said to be a \textbf{closed} set in $S$ if the complement $S \setminus F$ is an open set in $S$.
+\end{definition}
+
+\begin{definition}
+	Let $(S_1,d_1)$ and $(S_2,d_2)$ be metric spaces, and let $f:S_1 \to S_2$ be a function from $S_1$ to $S_2$. The function $f$ is said to be \textbf{continuous} at the point $c$ in $S_1$ if for every $\varepsilon$-neighborhood $V_\varepsilon(f(c))$ of $f(c)$ there exists a $\delta$-neighborhood $V_\delta(c)$ of $c$ such that if $x \in V_\delta(c)$, then $f(x)\in V_\varepsilon(f(c))$.
+\end{definition}
+
+\begin{theorem}[\textbf{Global Continuity Theorem}]
+	If $(S_1,d_1)$ and $(S_2,d_2)$ are metric spaces, then a function $f:S_1 \to S_2$ is continuous on $S_1$ if and only if $f^{-1}(G)$ is open in $S_1$ whenever $G$ is open in $S_2$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Preservation of Compactness}]
+	If $(S,d)$ is a compact metric space and if the function $f:S \to \R$ is continuous, then $f(S)$ is compact in $\R$.
+\end{theorem}
+
+\begin{definition}
+	A \textbf{semimetric} on a set $S$ is a function $d: S\times S \to \R$ that satisfies all of the conditions of a metric, except that condition (2) is replaces by the weaker condition
+	\[d(x,y)=0\ \ \text{  if  }\ \ x=y\]
+	A \textbf{semimetric space} $(S,d)$ is a set $S$ together with a semimetric $d$ on $S$.
+\end{definition}

@@ -1,0 +1,23 @@
+\section{Continuity and Gauges}
+
+\begin{definition}
+	A \textbf{partition} of an interval $I := [a,b]$ is a collection $\mathbb{P} = \{I_1, \dots, I_n\}$ of non-overlapping closed intervals whose union is $[a,b]$. We ordinarily denote the intervals by $I_i:=[x_{i-1}, x_i]$, where
+	\[a=x_0 < \dots < x_{i-1} < x_i < \dots < x_n = b.\]
+	The points $x_i\ (i-0, \dots, n)$ are called the \textbf{partition points} of $\mathbb{P}$. If a point $t_i$ has been chosen from each interval $I_i$ for $i=1, \dots, n$, then the points $t_i$ are called the \textbf{tags} and the set of ordered pairs
+	\[\mathbb{P} = \{(I_1, t_1), \dots, (I_n,t_n)\}\]
+	is called a \textbf{tagged partition} of $I$. (The dot signifies that the partition is tagged.)
+\end{definition}
+
+\begin{definition}
+	A \textbf{gauge} on $I$ is a strictly positive function defined on $I$. If $\delta$ is a gauge on $I$, then a (tagged) partition $\mathbb{P}$ is said to be $\delta$-\textbf{fine} if
+	\[t_i \in I_i \subseteq [t_i - \delta(t_i), t_i + \delta(t_i)],\ \ \ \ \ \text{for}\ \ \ \ \ i=1, \dots, n.\]
+	We note that the notion of $\delta$-fineness requires that the partition be tagged, so we do not need to say ``tagged partition" in this case.
+\end{definition}
+
+\begin{lemma}
+	If a partition $\mathbb{P}$ of $I:=[a,b]$ is $\delta$-fine and $x \in I$, then there exists a tag $t_i$ in $\mathbb{P}$ such that $|x-t_i| \leq \delta (t_i)$.
+\end{lemma}
+
+\begin{theorem}
+	If $\delta$ is a gauge defined on the interval $[a,b]$, then there exists a $\delta$-fine partition of $[a,b]$.
+\end{theorem}

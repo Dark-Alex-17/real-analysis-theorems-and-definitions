@@ -1,0 +1,92 @@
+\section{The Exponential and Logarithmic Functions}
+
+\begin{theorem}
+	There exists a function $:\R \to \R$ such that:
+	\begin{enumerate}
+		\item $E'(x)=E(x)\ \forall\ x \in \R$.
+		\item $E(0)=1$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	The function $E$ has a derivative of every order and $E^{(n)}(x)=E(x)$ for all $n \in \N$, $x \in \R$.
+\end{corollary}
+
+\begin{corollary}
+	If $x>0$, then $1+x < E(x)$.
+\end{corollary}
+
+\begin{theorem}
+	The function $E:\R\to\R$ that satisfies (1) and (2) of \textit{Theorem 8.3.1} is unique.
+\end{theorem}
+
+\begin{theorem}
+	The unique function $E:\R\to\R$, such that $E'(x)=E(x)$ for all $x \in \R$ and $E(0)=1$, is called the \textbf{exponential function}. The number $e=E(1)$ is called \textbf{Euler's number}. We will frequently write
+	\[\exp(x):=E(x)\ \text{or}\  e^x:=E(x)\ \text{for}\ x \in \R\]
+\end{theorem}
+
+\begin{theorem}
+	The exponential function satisfies the following properties:
+	\begin{enumerate}
+		\item $E(x) \neq 0$ for all $x \in \R$;
+		\item $E(x_+y)=E(x)E(y)$ for all $x,y,\in\R$.
+		\item $E(r) = e^r$ for all $r \in \Q$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	The exponential function $E$ is strictly increasing on $\R$ and has range equal to $\{y \in \R : y > 0\}$. Further, we have
+	\[\lim\limits_{x \to -\infty} E(x)=0\ \ \text{and}\ \ \lim\limits_{x \to \infty} = \infty\]
+\end{theorem}
+
+\begin{definition}
+	The function inverse to $E:\R \to \R$ is called the \textbf{logarithm} (or the \textbf{natural logarithm}). It will be denoted by $L$, or by $\ln$.
+\end{definition}
+
+\begin{theorem}
+	The logarithm is a strictly increasing function $L$ with domain $\{x \in \R : x > 0\}$ and range $\R$. The derivative of $L$ is given by
+	\begin{enumerate}
+		\item $L'(x)=1/x$ for $x >0$.The logarithm satisfies the functional equation
+		\item $L(xy)=L(x)+L(y)$ for $x>0,  y>0$. Moreover, we have
+		\item $L(1)=0$ and $L(e)=1$,
+		\item $L(x^r)=rL(x)$ for $x > 0$, $r \in \Q$,
+		\item $\lim\limits_{x \to 0^+} L(x)=-\infty$ and $\lim\limits_{x \to \infty}L(x) = \infty$
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	If $\alpha \in \R$ and $x > 0$, the number $x^\alpha$ is defined to be
+	\[x^\alpha := e^{\alpha \ln x}=E(\alpha L(x))\]
+	The function $x \mapsto x^\alpha$ for $x > 0$ is called the \textbf{power function} with exponent $\alpha$.
+\end{definition}
+
+\begin{theorem}
+	If $\alpha \in \R$ and $x,y$ belong to $(0, \infty)$, then:
+	\begin{enumerate}
+		\item $1^\alpha = 1$
+		\item $x^\alpha >0$
+		\item $(xy)^\alpha = x^\alpha y^\alpha$
+		\item $(x/y)^\alpha = x^\alpha / y^\alpha$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $\alpha, \beta \in \R$ and $x \in (0,\infty)$, then:
+	\begin{enumerate}
+		\item $x^{\alpha + \beta}=x^\alpha x^\beta$
+		\item $(x^\alpha)^\beta = x^{\alpha \beta}=(x^\beta)^\alpha$
+		\item $x^{-\alpha} = 1/x^\alpha$
+		\item if $\alpha < \beta$, then $x^\alpha < x^\beta$ for $x > 1$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $\alpha \in \R$. Then the function $x \mapsto x^\alpha$ on $(0,\infty)$ to $\R$ is continuous and differentiable and
+	\[Dx^\alpha = \alpha x^{\alpha - 1}\ \ \text{for}\ \ x \in (0, \infty)\]
+\end{theorem}
+
+\begin{definition}
+	Let $a>0,\ a \neq 1$. We define
+	\[\log_a(x) := \frac{\ln(x)}{\ln(a)}\ \ \text{for}\ \ x \in (0,\infty)\]
+	For $x \in (0,\infty)$, the number $\log_a(x)$ is called the \textbf{logarithm of $x$ to the base $a$}. The case $a=e$ yields the logarithm (or natural logarithm) function of \textit{Definition 8.3.1}. The case $a=10$ give sthe base 10 logarithm (or common logarithm) function $\log_{10}$ often used in computations. Properties of the functions $\log_a$ will be given in the exercises.
+\end{definition}

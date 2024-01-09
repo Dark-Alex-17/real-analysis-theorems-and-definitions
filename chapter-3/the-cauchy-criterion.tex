@@ -1,0 +1,36 @@
+\section{The Cauchy Criterion}
+
+\begin{theorem}
+	A sequence $X=(x_n)$ of real numbers is said to be a \textbf{Cauchy sequence} if for every $\varepsilon >0$ there exists a natural number $H(\varepsilon)$ such that for all natural numbers $n,m \geq H(\varepsilon)$, the terms $x_n, x_m$ satisfy $|x_n-x_m| < \varepsilon$.
+\end{theorem}
+
+\begin{lemma}
+	If $X=(x_n)$ is a convergent sequence of real numbers, then $X$ is a Cauchy sequence.
+\end{lemma}
+
+\begin{lemma}
+	A Cauchy sequence of real numbers is bounded.
+\end{lemma}
+
+\begin{theorem}[\textbf{Cauchy Convergence Criterion}]
+	A sequence of real numbers is convergent if and only if it is a Cauchy sequence.
+\end{theorem}
+
+\begin{definition}
+	We say that a sequence $X=(x_n)$ of real numbers is \textbf{contractive} if there exists a constant $C$, $0<C,1$, such that
+	\[|x_{n+2}-x_{n+1}| \leq C|x_{n+1}-x_n|\]
+	for all $n \in \N$. The number $C$ is called the \textbf{constant} of the contractive sequence.
+\end{definition}
+
+\begin{theorem}
+	Every contractive sequence is a Cauchy sequence, and therefore is convergent.
+\end{theorem}
+
+\begin{corollary}
+	If $X:=(x_n)$ is a contractive sequence with constant $C, 0<C<1$, and if $x^*:= \lim X$, then
+	\begin{enumerate}
+		\item $|x^*-x_n| \leq \frac{C^{n-1}}{1-C}|x_2-x_1|$,
+
+		\item $|x^*-x_n| \leq \frac{C}{1-C}|x_n-x_{n-1}|$.
+	\end{enumerate}
+\end{corollary}

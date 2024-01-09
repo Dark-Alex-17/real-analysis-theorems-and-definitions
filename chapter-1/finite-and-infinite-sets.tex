@@ -1,0 +1,89 @@
+\section{Finite and Infinite Sets}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item The empty set $\emptyset$ is said to have $0$ \textbf{elements}.
+
+		\item If $n \in \N$, a set $S$ is said to have $n$ \textbf{elements} if there exists a bijection from the set $\N_n := \{1, 2, \dots, n\}$ onto $S$.
+
+		\item A set $S$ is said to be \textbf{finite} if it is either empty or it has $n$ elements for some $n \in \N$.
+
+		\item A set $S$ is said to be \textbf{infinite} if it is not finite.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}[\textbf{Uniqueness Theorem}]
+	If $S$ is a finite set, then the number of elements is $S$ is a unique number in $\N$.
+\end{theorem}
+
+\begin{theorem}
+	The set $\N$ of natural numbers is an infinite set.
+\end{theorem}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item[]
+		\item If $A$ is a set with $m$ elements and $B$ is a set with $n$ elements and if $A \cap B = \emptyset$, then $A \cup B$ has $m +n$ elements.
+
+		\item If $A$ is a set with $m \in \N$ elements and $C \subseteq A$ is a set with $1$ element, then $A \setminus C$ is a set with $m-1$ elements.
+
+		\item If $C$ is an infinite set and $B$ is a finite set, then $C \setminus B$ is an infinite set.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $S$ and $T$ are sets and that $T \subseteq S$.
+	\begin{enumerate}
+		\item If $S$ is a finite set, then $T$ is a finite set.
+
+		\item If $T$ is an infinite set, then $S$ is an infinite set.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item A set $S$ is said to be \textbf{denumerable} (or \textbf{countably infinite}) if there exists a bijection of $\N$ onto $S$.
+
+		\item A set $S$ is said to be \textbf{countable} if it is either finite or denumerable.
+
+		\item A set $S$ is said to be \textbf{uncountable} if it is not countable.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	The set $\N \times \N$ is denumerable.
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $S$ and $T$ are sets and that $T \subseteq S$.
+	\begin{enumerate}
+		\item If $S$ is a countable set, then $T$ is a countable set.
+
+		\item If $T$ is an uncountable set, then $S$ is an uncountable set.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	The following statements are equivalent:
+	\begin{enumerate}
+		\item $S$ is a countable set.
+
+		\item There exists a surjection of $\N$ onto $S$.
+
+		\item There exists an injection of $S$ into $\N$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	The set $\Q$ of all rational numbers is denumerable.
+\end{theorem}
+
+\begin{theorem}
+	If $A_m$ is a countable set for each $m \in \N$, then the union $A:= \bigcup\limits_{m=1}^{\infty} A_m$ is countable.
+\end{theorem}
+
+\begin{theorem}[\textbf{Cantor's Theorem}]
+	If $A$ is any set, then there is no surjection of $A$ onto the set $\mathcal{P}(A)$ of all subsets of $A$.
+\end{theorem}

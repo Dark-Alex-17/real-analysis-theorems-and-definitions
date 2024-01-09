@@ -1,0 +1,69 @@
+\section{The Trigonometric Functions}
+
+\begin{theorem}
+	There exist functions $C:\R \to \R$ and $S:\R\to\R$ such that
+	\begin{enumerate}
+		\item $C''(x)=-C(x)$ and $S''(x)=-S(x)$ for all $x \in \R$.
+		\item $C(0)=1,\ C'(0)=0$, and $S(0)=0,\ S'(0)=1$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	If $C,\ S$ are the functions in \textit{Theorem 8.4.1}, then $C'(x)=-S(x)$ and $S'(x)=C(x)$ for all $x \in \R$. Moreover, these functions have derivatives of all orders.
+\end{corollary}
+
+\begin{corollary}
+	The functions $C$ and $S$ satisfy the Pythagorean Identity:
+	\[(C(x))^2+(S(x))^2=1\ \ \text{for}\ \ x \in \R\]
+\end{corollary}
+
+\begin{theorem}
+	The functions $C$ and $S$ satisfying properties (1) and (2) of \textit{Theorem 8.4.1} are unique.
+\end{theorem}
+
+\begin{definition}
+	The unique functions $C:\R\to\R$ and $S:\R\to\R$ such that $C''(x)=C(x)$ and $S''(x)=-S(x)$ for all $x \in \R$ and $C(0)=1,\ C'(0)=0$ and $S(0)=0,\ S'(0)=1$ are called the \textbf{cosine function} and the \textbf{sine function}, respectively. We ordinarily write
+	\[\cos x := C(x)\ \ \text{and}\ \ \sin x := \S(x)\ \ \text{for}\ \ x \in \R\]
+\end{definition}
+
+\begin{theorem}
+	If $f:\R\to\R$ is such that
+	\[f''(x)=-f(x)\ \ \text{for}\ \ x \in \R\]
+	then there exist real numbers $\alpha,\ \beta$ such that
+	\[f(x)=\alpha C(x)+\beta S(x)\ \ \text{for}\ \ x \in \R\]
+\end{theorem}
+
+\begin{theorem}
+	The function $C$ is even and $S$ is odd in the sense that
+	\begin{enumerate}
+		\item $C(-x)=C(x)$ and $S(-x)=-S(x)$ for $x \in \R$. If $x,\ y \in \R$, then we have the ``addition formulas".
+		\item $C(x+y)=C(x)C(y)-S(x)S(y)$, $S(x+y)=S(x)C(y)+C(x)S(y)$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $x \in \R,\ x \geq 0$, then we have
+	\begin{enumerate}
+		\item $-x \leq S(x) \leq x;$
+		\item $1-\frac{1}{2}x^2 \leq C(x) \leq 1;$
+		\item $x-\frac{1}{6}x^3 \leq S(x) \leq x;$
+		\item $1-\frac{1}{2}x^2 \leq C(x) \leq 1-\frac{1}{2}x^2+\frac{1}{24}x^4$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+	There exists a root $\gamma$ of the cosine function in the interval $(\sqrt{2}, \sqrt{3})$. Moreover $C(x) > 0$ for $x \in [0, \gamma)$. The number $2\gamma$ is the smallest positive root of $S$.
+\end{lemma}
+
+\begin{definition}
+	Let $\pi:=2\gamma$ denote the smallest positive root of $S$.
+\end{definition}
+
+\begin{theorem}
+	The functions $C$ and $S$ have period $2\pi$ in the sense that
+	\begin{enumerate}
+		\item $C(x+2\pi)=C(x)$ and $S(x+2\pi) = S(x)$ for $x \in \R$.
+		      \\Moreover we have
+		\item $S(x)=C(\frac{1}{2}\pi - x) = -C(x+\frac{1}{2}\pi)$, $C(x)=S(\frac{1}{2}\pi-x)=S(x+\frac{1}{2}\pi)$ for all $x \in \R$.
+	\end{enumerate}
+\end{theorem}

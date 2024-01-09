@@ -1,0 +1,53 @@
+\section{Monotone and Inverse Functions}
+
+\begin{definition}
+	Recall that if $A \subseteq \R$, then a function $f: A \to \R$ is said to be \textbf{increasing on} $A$ if whenever $x_1,x_2 \in A$ and $x_1 \leq x_2$, then $f(x_1) \leq f(x_2)$. The function $f$ is said to be \textbf{strictly increasing on} $A$ if whenever $x_1,x_2 \in A$ and $x_1<x_2$, then $f(x_1) < f(x_2)$. Similarly, $g:A \to \R$ is said to be \textbf{decreasing on} $A$ if whenever $x_1,x_2 \in A$ and $x_1 \leq x_2$ then $g(x_1) \geq g(x_2)$. The function $g$ is said to be \textbf{strictly decreasing on} $A$ if whenever $x_1, x_2 \in A$ and $x_1 < x_2$ then $g(x_1) > g(x_2)$.
+	\qquad If a function is either increasing or decreasing on $A$, we say that it is \textbf{monotone} on $A$. If $f$ is either strictly increasing or strictly decreasing on $A$, we say that $f$ is \textbf{strictly monotone} on $A$.
+\end{definition}
+
+\begin{theorem}
+	Let $I \subseteq \R$ be an interval and let $f:I \rightarrow \R$ be increasing on $I$. Suppose that $c \in I$ is not an endpoint of $I$. Then
+	\begin{enumerate}
+		\item $\lim\limits_{x\to c^-} f = \sup \{f(x): x \in I,\ x < c\}$,
+		\item $\lim\limits_{x\to c^+} f = \inf \{f(x): x \in I,\ x > c\}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	Let $I \subseteq \R$ be an interval and let $f:I \rightarrow \R$ be increasing on $I$. Suppose that $c \in I$ is not an endpoint of $I$. Then the following statements are equivalent.
+	\begin{enumerate}
+		\item $f$ is continuous at $c$.
+		\item $\lim\limits_{x\to c^-} f = f(c) = \lim\limits_{x\to c^+}$.
+		\item $\sup \{f(x):x \in I,\ x < c\} = f(c) = \inf \{f(x) : x \in I,\ x > c\}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}
+	If $f:I \to \R$ is increasing on $I$ and if $c$ is not an endpoint of $I$, we define the \textbf{jump of $f$ at $c$} to be $j_f(c):=\lim\limits_{x \to c^+} f-\lim\limits_{x \to c^-} f$. It follows from \textit{Theorem 5.6.1} that
+	\[j_f(c)=\inf \{f(x)\ :\ x \in I,\ x > c\}- \sup \{f(x)\ :\ x \in I,\ x < c\}\]
+	for an increasing function. If the left endpoint $a$ of $I$ belongs to $I$, we define the \textbf{jump of $f$ at $a$} to be $j_f(a):=\lim\limits_{x \to a^+} f-f(a)$. If the right endpoint $b$ belongs to $I$, we define the \textbf{jump of $f$ at $b$} to be $j_f(b):=f(b)-\lim\limits_{x \to b^-} f$.
+\end{definition}
+
+\begin{theorem}
+	Let $I \subseteq \R$ be an interval and let $f:I \rightarrow \R$ be increasing on $I$. If $c \in I$, then $f$ is continuous at $c$ if and only if $j_f(c)=0$.
+\end{theorem}
+
+\begin{theorem}
+	Let $I \subseteq \R$ be an interval and let $f: I \rightarrow \R$ be monotone on $I$. Then the set of points $D \subseteq I$ at which $f$ is discontinuous is a countable set.
+\end{theorem}
+
+\begin{theorem}[\textbf{Continuous Inverse Theorem}]
+	Let $I \subseteq \R$ be an interval and let $f:I \rightarrow \R$ be strictly monotone and continuous on $I$. Then the function $g$ inverse to $f$ is strictly monotone and continuous on $J:=f(I)$.
+\end{theorem}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item If $m,n \in \N$ and $x \geq 0$, we define $x^{m/n} := (x^{1/n})^m$.
+		\item If $m,n \in N$ and $x > 0$, we define $x^{-m/n} := (x^{1/n})^{-m}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	If $m \in \Z,\ n \in \N$, and $x > 0$, then $x^{m/n}=(x^m)^{1/n}$.
+\end{theorem}

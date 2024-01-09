@@ -1,0 +1,37 @@
+\section{Pointwise and Uniform Convergence}
+
+\begin{definition}
+	Let $(f_n)$ be a sequence of functions on $A \subseteq \R$ to $\R$, let $A_0\subseteq A$, and let $f: A_0 \to \R$. We say that the \textbf{sequence $(f_n)$ converges on $A_0$ to $f$} if, for each, $x \in A_0$, the sequence $(f_n(x))$ converges to $f(x)$ in $\R$. In this case we call $f$ the \textbf{limit on $A_0$ of the sequence $(f_n)$}. When such a function $f$ exists, we say that the sequence $(f_n)$ \textbf{is convergent on $A_0$}, or that $(f_n)$ \textbf{converges pointwise on $A_0$}.
+\end{definition}
+
+\begin{lemma}
+	A sequence $(f_n)$ of functions on $A \subseteq \R$ to $\R$ converges to a function $f:A_0 \to \R$ on $A_0$ if and only if for each $\varepsilon>0$ and each $x \in A_0$ there is a natural number $K(\varepsilon, x)$ such that if $n \geq K(\varepsilon, x)$, then
+	\[|f_n(x)-f(x)|<\varepsilon\]
+\end{lemma}
+
+\begin{definition}
+	A sequence $(f_n)$ of functions on $A \subseteq \R$ to $\R$ \textbf{converges uniformly on $A_0 \subseteq A$} to a function $f:A_0 \to \R$ if for each $\varepsilon >0$ there is a natural number $K(\varepsilon)$ (depending on $\varepsilon$ but \textbf{not} on $x \in A_0$) such that if $n \geq K(\varepsilon)$, then
+	\[|f_n(x)-f(x)|<\varepsilon\ \forall\ x \in A_0\]
+	In this case we say that the sequence $(f_n)$ is \textbf{uniformly convergent on $A_0$}. Sometimes we write
+	\[f_n \rightrightarrows f\ \text{on}\ A_0\ \text{or}\ f_n(x)\rightrightarrows f(x)\ \text{for}\ x \in A_0\]
+\end{definition}
+
+\begin{lemma}
+	A sequence $(f_n)$ of functions on $A \subseteq \R$ to $\R$ does not converge uniformly on $A_0 \subseteq A$ to a function $f:A_0 \to \R$ if and only if for some $\varepsilon_0 >0$ there is a subsequence $(f_{n_k})$ of $(f_n)$ and a sequence $(x_k)$ in $A_0$ such that
+	\[|f_{n_k}(x_k)-f(x_k)|\geq\varepsilon_0\ \forall\ k \in \N\]
+\end{lemma}
+
+\begin{definition}
+	If $A \subseteq \R$ and $\varphi : A \to \R$ is a function, we say that $\varphi$ is \textbf{bounded on $A$} if the set $\varphi(A)$ is a bounded subset of $\R$. If $\varphi$ is bounded we define the \textbf{uniform norm of $\varphi$ on $A$} by
+	\[||\varphi||_A:=\sup\{|\varphi(x)|:x \in A\}\]
+	Note that it follows that if $\varepsilon >0$, then
+	\[||\varphi||_A \leq \varepsilon \iff |\varphi(x)|\leq \varepsilon\ \forall\ x \in A\]
+\end{definition}
+
+\begin{lemma}
+	A sequence $(f_n)$ of bounded functions on $A\subseteq \R$ converges uniformly on $A$ to $f$ if and only if $||f_n - f||_A \to 0$.
+\end{lemma}
+
+\begin{theorem}[\textbf{Cauchy Criterion for Uniform Convergence}]
+	Let $(f_n)$ be a sequence of bounded functions on $A \subseteq \R$. Then this sequence converges uniformly on $A$ to a bounded function $f$ if and only if for each $\varepsilon>0$ there is a number $H(\varepsilon) \in \N$ such that for all $m,n\geq H(\varepsilon)$, then $||f_m-f_n||_A \leq \varepsilon$.
+\end{theorem}

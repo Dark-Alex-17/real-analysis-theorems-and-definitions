@@ -1,0 +1,71 @@
+\section{Subsequences and the Bolzano-Wierstrass Theorem}
+
+\begin{definition}
+	Let $X=(x_n)$ be a sequence of real numbers and let $n_1 < n_2 < \dots < n_k < \dots$ be a strictly increasing sequence of natural numbers. Then the sequence $X' = (x_{n_k})$ given by
+	\[(x_{n_1}, x_{n_2}, \dots, x_{n_k}, \dots)\]
+	is called a \textbf{subsequence} of $X$.
+\end{definition}
+
+\begin{theorem}
+	If a sequence $X=(x_n)$ of real numbers converges to a real number $x$, then any subsequence $X' = (x_{n_k})$ of $X$ also converges to $x$.
+\end{theorem}
+
+\begin{theorem}
+	Let $X=(x_n)$ be a sequence of real numbers. Then the following are equivalent:
+	\begin{enumerate}
+		\item The sequence $X=(x_n)$ does not converge to $x \in \R$.
+
+		\item There exists an $\varepsilon_0 > 0$ such that for any $k \in \N$, there exists $n_k \in \N$ such that $n_k \geq k$ and $|x_{n_k}-x| \geq \varepsilon_0$.
+
+		\item There exists an $\varepsilon_0>0$ and a subsequence $X'=(x_{n_k})$ of $X$ such that $|x_{n_k}-x| \geq \varepsilon_0$ for all $k \in \N$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Divergence Criteria}]
+	If a sequence $X=(x_n)$ of real numbers has either of the following properties, then $X$ is divergent.
+	\begin{enumerate}
+		\item $X$ has two convergent subsequences $X'=(x_{n_k})$ and $X''=(x_{r_k})$ whose limits are not equal.
+
+		\item $X$ is unbounded.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Monotone Subsequence Theorem}]
+	If $X=(x_n)$ is a sequence of real numbers, then there is a subsequence of $X$ that is monotone.
+\end{theorem}
+
+\begin{theorem}[\textbf{The Bolzano-Wierstrass Theorem}]
+	A bounded sequence of real numbers has a convergent subsequence.
+\end{theorem}
+
+\begin{theorem}
+	Let $X=(x_n)$ be a bounded sequence of real numbers and let $x \in \R$ have the property that every convergent subsequence of $X$ converges to $x$. Then the sequence $X$ converges to $x$.
+\end{theorem}
+
+\begin{definition}
+	Let $X=(x_n)$ be a bounded sequence of real numbers.
+	\begin{enumerate}
+		\item The \textbf{limit superior} of $(x_n)$ is the infimum of the set $V$ of $v \in \R$ such that $v < x_n$ for at most a finite number of $n \in \N$. It is denoted by
+		      \[\lim \sup (x_n)\ \ \ \text{or}\ \ \ \lim \sup X\ \ \ \text{or}\ \ \ \overline{\lim} (x_n)\]
+
+		\item The \textbf{limit inferior} of $(x_n)$ is the supremum of the set of $w \in \R$ such that $x_m < w$ for at most a finite number of $m \in \N$. It is denoted by
+		      \[\lim \inf (x_n)\ \ \ \text{or}\ \ \ \lim \inf X\ \ \ \text{or}\ \ \ \overline{\lim}(x_n)\]
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	If $(x_n)$ is a bounded sequence of real numbers, then the following statements for a real number $x^*$ are equivalent.
+	\begin{enumerate}
+		\item $x^* = \lim \sup (x_n)$.
+
+		\item If $\varepsilon>0$, there are at most a finite number of $n \in \N$ such that $x^* + \varepsilon < x_n$, but an infinite number of $n \in \N$ such that $x^*-\varepsilon < x_n$.
+
+		\item If $u_m=\sup \{x_n : n \geq m \}$, then $x^*= \inf \{u_m : m \in \N\}= \lim(u_m)$.
+
+		\item If $S$ is the set of subsequential limits of $(x_n)$, then $x^*= \sup S$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	A bounded sequence $(x_n)$ is convergent if and only if $\lim \sup (x_n)=\lim \inf (x_n)$.
+\end{theorem}

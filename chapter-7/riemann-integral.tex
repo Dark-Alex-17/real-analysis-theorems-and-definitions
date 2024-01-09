@@ -1,0 +1,53 @@
+\section{Riemann Integral}
+
+\begin{definition}
+	If $I:=[a,b]$ is a closed bounded interval in $\R$, then a \textbf{partition} of $I$ is a finite, ordered set $\mathcal{P}:=(x_0, x_1, \dots, x_{n-1}, x_n)$ of point in $I$ such that
+	\[a = x_0 < x_1 < \dots < x_{n-1} < x_n = b\]
+	Often we will denote the partition $\mathcal{P}$ by the notation $\mathcal{P}=\{[x_{i-1},x_i]\}_{i=1}^n$. We define the \textbf{norm} (or \textbf{mesh}) of $\mathcal{P}$ to be the number
+	\[||\mathcal{P}||:=\max\{x_1-x_0, x_2-x_1, \dots, x_n-x_{n-1}\}\]
+	Thus the norm {of a partition is merely the length of the largest subinterval into which the partition divides $[a,b]$. Clearly, many partitions have the same norm, so the partition is \textit{not}} a function of the norm.
+	\\If a point $t_i$ has been selected from each subinterval $I_i=[x_{i-1},x_i]$, for $i=1,2,\dots,n$, then the points are called \textbf{tags} of the subintervals of $I_i$. A set of ordered pairs
+	\[\dot{\mathcal{P}}:=\{([x_{i-1},x_i],t_i)\}_{i=1}^{n}\]
+	of subintervals and corresponding tags is called a \textbf{tagged partition} of $I$.
+	\\If $\dot{\mathcal{P}}$ is the tagged partition given above, we define the \textbf{Riemann sum} of a function $f:[a,b] \to \R$ corresponding to $\dot{\mathcal{P}}$ to be the number
+	\[S(f;\dot{\mathcal{P}}):=\sum\limits_{i=1}^{n} f(t_i)(x_i-x_{i-1})\]
+	We will also use this notation when $\dot{\mathcal{P}}$ denotes a \textit{subset} of a partition, and not the entire partition.
+\end{definition}
+
+\begin{definition}
+	A function $f:[a,b] \to \R$ is said to be \textbf{Riemann integrable} on $[a,b]$ if there exists a number $L \in \R$ such that for every $\varepsilon >0$ there exists $\delta_\varepsilon >0$ such that if $\dot{\mathcal{P}}$ is any tagged partition of $[a,b]$ with $||\dot{\mathcal{P}}||<\delta_\varepsilon$, then
+	\[|S(f;\dot{\mathcal{P}})-L|<\varepsilon\]
+	The set of all Riemann integrable functions on $[a,b]$ will be denoted by $\mathcal{R}[a,b]$.
+\end{definition}
+
+\begin{remark}
+	It is sometimes said that the integral $L$ is "the limit" of the Riemann sums $S(f:\dot{\mathcal{P}})$ as the norm $||\dot{\mathcal{P}}|| \to 0$. However, since $S(f;\dot{\mathcal{P}})$ is not a function of $||\dot{\mathcal{P}}||$, this \textbf{limit} is not of the type that we have studied before.
+	\\\\First we will show that if $f \in \mathcal{R}[a,b]$, then the number $L$ is uniquely determined. It will be called the \textbf{Riemann integral of $f$} over $[a,b]$. Instead of $L$, we will usually write
+	\[L=\int_{a}^{b}f\ \text{ or }\ \int_{a}^{b}f(x)dx\]
+\end{remark}
+
+\begin{theorem}
+	If $f \in \mathcal{R}[a,b]$, then the value of the integral is uniquely determined.
+\end{theorem}
+
+\begin{theorem}
+	If $g$ is Riemann integrable on $[a,b]$ and if $f(x)=g(x)$ except for a finite number of points in $[a,b]$, then $f$ is Riemann integrable and $\displaystyle\int_{a}^{b}f=\displaystyle\int_{b}^{a}g$.
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $f$ and $g$ are in $\mathcal{R}[a,b]$. Then:
+	\begin{enumerate}
+		\item If $k \in \R$, the function $kf$ is in $\mathcal{R}[a,b]$ and
+		      \[\displaystyle\int_{a}^{b}kf=k\displaystyle\int_{a}^{b}f\]
+
+		\item The function $f+g$ is in $\mathcal{R}[a,b]$ and
+		      \[\displaystyle\int_{a}^{b}(f+g)=\displaystyle\int_{a}^{b}f+\displaystyle\int_{a}^{b}g\]
+
+		\item If $f(x) \leq g(x)$ for all $x \in [a,b]$, then
+		      \[\displaystyle\int_{a}^{b}f \leq \displaystyle\int_{a}^{b}g\]
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $f \in \mathcal{R}[a,b]$, then $f$ is bounded on $[a,b]$.
+\end{theorem}

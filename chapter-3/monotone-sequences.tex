@@ -1,0 +1,22 @@
+\section{Monotone Sequences}
+
+\begin{definition}
+	Let $X=(x_n)$ be a sequence of real numbers. We say that $X$ is \textbf{increasing} if it satisfies the inequalities
+	\[x_1 \leq x_2 \leq \dots \leq x_n \leq x_{n+1} \leq \dots\]
+
+	We say that $X$ is \textbf{decreasing} if it satisfies the inequalities
+	\[x_1 \geq x_2 \geq \dots \geq x_n \geq x_{n+1} \geq \dots\]
+
+	We say that $X$ is \textbf{monotone} if it is either increasing or decreasing.
+\end{definition}
+
+\begin{theorem}[\textbf{Monotone Convergence Theorem}]
+	A monotone sequence of real numbers is convergent if and only if it is bounded. Further:
+	\begin{enumerate}
+		\item If $X=(x_n)$ is a bounded increasing sequence, then
+		      \[\lim (x_n) = \sup \{x_n : n \in \N\}\]
+
+		\item If $Y=(y_n)$ is a bounded decreasing sequence, then
+		      \[\lim (y_n) = \inf \{y_n : n \in \N\}\]
+	\end{enumerate}
+\end{theorem}

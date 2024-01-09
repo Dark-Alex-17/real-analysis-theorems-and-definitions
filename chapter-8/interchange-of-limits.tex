@@ -1,0 +1,30 @@
+\section{Interchange of Limits}
+
+\begin{theorem}
+	Let $(f_n)$ be a sequence of continuous functions on a set $A \subseteq \R$ and suppose that $(f_n)$ converges uniformly on $A$ to a function $f:A \to \R$. Then $f$ is continuous on $A$.
+\end{theorem}
+
+\begin{remark}
+	Although the uniform convergence of the sequence of continuous functions is sufficient to guarantee the continuity of the limit function, it is \textit{not} necessary.
+\end{remark}
+
+\begin{theorem}
+	Let $J \subseteq \R$ be a bounded interval and let $(f_n)$ be a sequence of functions on $J$ to $\R$. Suppose that there exists $x_0 \in J$ such that $(f_n(x_0))$ converges, and that the sequence $(f'_n)$ of derivatives exists on $J$ and converges uniformly on $J$ to a function $g$.
+	\\Then the sequence $(f_n)$ converges uniformly on $J$ to a function $f$ that has a derivative at every point of $J$ and $f'=g$.
+\end{theorem}
+
+\begin{theorem}
+	Let $(f_n)$ be a sequence of functions in $\mathcal{R}[a,b]$ and suppose that $(f_n)$ converges \textbf{uniformly} on $[a,b]$ to $f$. Then $f \in \mathcal{R}[a,b]$ and
+	\[\displaystyle\int_{a}^{b}f=\lim\limits_{n \to \infty}\displaystyle\int_{a}^{b}f_n\]
+	holds.
+\end{theorem}
+
+\begin{theorem}[\textbf{Bounded Convergence Theorem}]
+	Let $(f_n)$ be a sequence in $\mathcal{R}[a,b]$ that converges on $[a,b]$ to a function $f \in \mathcal{R}[a,b]$.. Suppose also that there exists $B >0$ such that $|f_n(x)|\leq B$ for all $x \in [a,b]$, $n \in \N$. Then
+	\[\displaystyle\int_{a}^{b}f=\lim\limits_{n \to \infty}\displaystyle\int_{a}^{b} f_n\]
+	holds.
+\end{theorem}
+
+\begin{theorem}[\textbf{Dini's Theorem}]
+	Suppose that $(f_n)$ is a monotone sequence of continuous functions on $I:=[a,b]$ that converges on $I$ to a continuous function $f$. Then the convergence of the sequence is uniform.
+\end{theorem}

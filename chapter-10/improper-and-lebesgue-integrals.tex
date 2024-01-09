@@ -1,0 +1,72 @@
+\section{Improper and Lebesgue Integrals}
+
+\begin{theorem}[\textbf{Hake's Theorem}]
+	If $f:[a,b] \to \R$, then $f \in \mathcal{R}^*[a,b]$ if and only if for every $\gamma \in (a,b)$ the restriction of $f$ to $[a,\gamma]$ belongs to $\mathcal{R}^*[a,\gamma]$ and
+	\[\lim\limits_{\gamma \to b^-}\displaystyle\int_{a}^{\gamma}f=A\in\R\]
+	In this case $\displaystyle\int_{a}^{b}f=A$.
+\end{theorem}
+
+\begin{definition}
+	A function $f \in \mathcal{R}^*[a,b]$ such that $|f| \in \mathcal{R}^*[a,b]$ is said to be \textbf{Lebesgue integrable} on $[a,b]$. The collection of all Lebesgue integrable functions on $[a,b]$ is denoted by $\mathcal{L}[a,b]$.
+\end{definition}
+
+\begin{theorem}[\textbf{Comparison Test}]
+	If $f,\omega \in \mathcal{R}^*[a,b]$ and $|f(x)| \leq \omega(x)$ for all $x \in [a,b]$, then $f \in \mathcal{L}[a,b]$ and
+	\[\abs{\displaystyle\int_{a}^{b}f}\leq\displaystyle\int_{a}^{b}|f| \leq\displaystyle\int_{a}^{b}\omega\]
+\end{theorem}
+
+\begin{theorem}
+	If $f,g \in \mathcal{L}[a,b]$ and if $c \in \R$, then $cf$ and $f+g$ also belong to $\mathcal{L}[a,b]$. Moreover
+	\[\displaystyle\int_{a}^{b}cf=c\displaystyle\int_{a}^{b}f\ \ \text{  and  }\ \ \displaystyle\int_{a}^{b}|f+g|\leq\displaystyle\int_{a}^{b}|f|+\displaystyle\int_{a}^{b}|g|\]
+\end{theorem}
+
+\begin{theorem}
+	If $f \in \mathcal{R}^*[a,b]$, the following assertions are equivalent:
+	\begin{enumerate}
+		\item $f \in \mathcal{L}[a,b]$.
+		\item There exists $\omega \in \mathcal{L}[a,b]$ such that $f(x)\leq\omega(x)$ for all $x \in [a,b]$.
+		\item There exists $\alpha \in \mathcal{L}[a,b]$ such that $\alpha(x) \leq f(x)$ for all $x \in [a,b]$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $f,g \in \mathcal{L}[a,b]$, then the functions $\max \{f,g\}$ and $\min \{f,g\}$ also belong to $\mathcal{L}[a,b]$.
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $f,g,\alpha,$ and $\omega$ belong to $\mathcal{R}^*[a,b]$. If
+	\[f\leq\omega,\ g\leq\omega\ \ \text{  or if  }\ \ \alpha\leq f,\ \alpha \leq g,\]
+	then $\max \{f,g\}$ and $\min\{f,g\}$ also belong to $\mathcal{R}^*[a,b]$.
+\end{theorem}
+
+\begin{definition}
+	If $f \in \mathcal{L}[a,b]$, we define the \textbf{seminorm} of $f$ to be
+	\[||f||:=\displaystyle\int_{a}^{b}|f|\]
+	If $f,g \in \mathcal{L}[a,b]$, we define the \textbf{distance between $f$ and $g$} to be
+	\[\text{dist}(f,g):=||f-g||=\displaystyle\int_{a}^{b}|f-g|\]
+\end{definition}
+
+\begin{theorem}
+	The seminorm function satisfies:
+	\begin{enumerate}
+		\item $||f||\geq 0$ for all $f \in \mathcal{L}[a,b]$.
+		\item If $f(x)=0$ for $x \in [a,b]$, then $||f||=0$.
+		\item If $f \in \mathcal{L}[a,b]$ and $c \in \R$, then $||cf||=|c|\cdot||f||$.
+		\item If $f,g \in \mathcal{L}[a,b]$, then $||f+g||\leq||f||+||g||$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	The distance function satisfies:
+	\begin{enumerate}
+		\item $\dist(f,g)\geq 0$ for all $f,g \in \mathcal{L}[a,b]$.
+		\item If $f(x)=g(x)$ for $x \in [a,b]$, then $\dist(f,g)=0$.
+		\item $\dist(f,g)=\dist(g,f)$ for all $f,g \in \mathcal{L}[a,b]$.
+		\item $\dist(f,h)\leq\dist(f,g)+\dist(g,h)$ for all $f,g,h \in \mathcal{L}[a,b]$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Completeness Theorem}]
+	A sequence $(f_n)$ of functions in $\mathcal{L}[a,b]$ converges to a function $f \in \mathcal{L}[a,b]$ if and only if it has the property that for every $\varepsilon>0$ there exists $H(\varepsilon)$ such that if $m,n\geq H(\varepsilon)$, then
+	\[||f_m-f_n||=\dist(f_m,f_n)<\varepsilon\]
+\end{theorem}

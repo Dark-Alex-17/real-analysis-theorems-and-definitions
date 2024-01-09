@@ -1,0 +1,64 @@
+\section{Convergence Theorems}
+
+\begin{theorem}[\textbf{Uniform Convergence Theorem}]
+	Let $(f_k)$ be a sequence in $\mathcal{R}^*[a,b]$ and suppose that $(f_k)$ converges \textbf{uniformly} on $[a,b]$ to $f$. Then $f \in \mathcal{R}^*[a,b]$ and
+	\[\displaystyle\int_{a}^{b}f=\lim\limits_{k \to \infty}\displaystyle\int_{a}^{b}f_k\]
+	holds.
+\end{theorem}
+
+\begin{definition}
+	A sequence $(f_k)$ in $\mathcal{R}^*(I)$ is said to be \textbf{equi-integrable} if for every $\varepsilon>0$ there exists a gauge $\delta_\varepsilon$ on $I$ such that if $\dot{\mathcal{P}}$ is any $\delta_\varepsilon$-fine partition of $I$ and $k\in\N$, then $\left|S(f_k;\dot{\mathcal{P}})-\displaystyle\int_If_k\right|<\varepsilon$.
+\end{definition}
+
+\begin{theorem}[\textbf{Equi-integrability Theorem}]
+	If $(f_k) \in \mathcal{R}^*(I)$ is equi-integrable on $I$ and if $f(x)=\lim f_k(x)$ for all $x \in I$, then $f \in \mathcal{R}^*(I)$ and
+	\[\displaystyle\int_If=\lim\limits_{k \to \infty}\displaystyle\int_If_k\]
+\end{theorem}
+
+\begin{definition}
+	We say that a sequence of functions on an interval $I \subseteq \R$ is \textbf{monotone increasing} if it satisfies $f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq f_{k+1}(x) \leq \dots$ for all $k \in \N$, $x \in I$. It is said to be \textbf{monotone decreasing} if it satisfies the opposite string of inequalities, and to be \textbf{monotone} if it is either monotone increasing or decreasing.
+\end{definition}
+
+\begin{theorem}[\textbf{Monotone Convergence Theorem}]
+	Let $(f_k)$ be a monotone sequence of functions in $\mathcal{R}^*(I)$ such that $f(x)=\lim f_k(x)$ almost everywhere on $I$. Then $f \in \mathcal{R}^*(I)$ if and only if the sequence of integrals $\left(\int_I f_k\right)$ is bounded in $\R$, in which case
+	\[\int_I f = \lim\limits_{k \to \infty} \int_I f_k.\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Dominated Convergence Theorem}]
+	Let $(f_n)$ be a sequence in $\mathcal{R}^*(I)$ and let $f(x)=\lim f_k(x)$ almost everywhere on $I$. If there exist functions $\alpha, \omega$ in $\mathcal{R}^*(I)$ such that
+	\[\alpha(x)\leq f_k(x)\leq\omega(x)\ \ \text{  for almost every  }\ \ x \in I\]
+	then $f \in \mathcal{R}^*(I)$ and
+	\[\displaystyle\int_If=\lim\limits_{k \to \infty}\displaystyle\int_I f_k.\]
+	Moreover, if $\alpha$ and $\omega$ belong to $\mathcal{L}(I)$, then $f_k$ and $f$ belong to $\mathcal{L}(I)$ and
+	\[||f_k-f||=\displaystyle\int_I|f_k-f|\to 0\]
+\end{theorem}
+
+\begin{definition}
+	A function $f:[a,b]\to\R$ is said to be \textbf{(Lebesgue) measurable} if there exists a sequence $(s_k)$ of step functions on $[a,b]$ such that
+	\[f(x)=\lim\limits_{k \to \infty} s_k(x)\ \ \text{  for almost every  }\ \ x \in [a,b]\]
+	We denote the collection of measurable functions on $[a,b]$ by $\mathcal{M}[a,b]$.
+\end{definition}
+
+\begin{theorem}
+	Let $f$ and $g$ belong to $\mathcal{M}[a,b]$ and let $c \in \R$.
+	\begin{enumerate}
+		\item Then the functions $cf, |f|,f+g,f-g,$ and $f\cdot g$ also belong to $\mathcal{M}[a,b]$.
+		\item If $\varphi:\R \to \R$ is continuous, then the composition $\varphi \circ f \in \mathcal{M}[a,b]$.
+		\item If $(f_n)$ is a sequence in $\mathcal{M}[a,b]$ and $f(x)=\lim f_n(x)$ almost everywhere on $I$, then $f \in \mathcal{M}[a,b]$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	A function $f:[a,b]\to\R$ is in $\mathcal{M}[a,b]$ if and only if there exists a sequence $(g_k)$ of continuous functions such that
+	\[f(x)=\lim\limits_{k \to \infty} g(x)\ \ \text{  for almost every  }\ \ x \in [a,b]\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Measurability Theorem}]
+	If $f \in \mathcal{R}^*[a,b]$, then $f \in \mathcal{M}[a,b]$
+\end{theorem}
+
+\begin{theorem}[\textbf{Integrability Theorem}]
+	Let $f\in\mathcal{M}[a,b]$. Then $f \in \mathcal{R}^*[a,b]$ if and only if there exist functions $\alpha, \omega \in \mathcal{R}^*[a,b]$ such that
+	\[\alpha(x)\leq f(x)\leq \omega(x)\ \ \text{  for almost every  }\ \ x \in [a,b]\]
+	Moreover, if either $\alpha$ or $\omega$ belongs to $\mathcal{L}[a,b]$, then $f \in \mathcal{L}[a,b]$.
+\end{theorem}

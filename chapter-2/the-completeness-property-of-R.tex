@@ -1,0 +1,45 @@
+\section{The Completeness Property of $\R$}
+
+\begin{definition}
+	Let $S$ be a nonempty subset of $\R$.
+	\begin{enumerate}
+		\item The set $S$ is said to be \textbf{bounded above} if there exists a number $u \in \R$ such that $s \leq u$ for all $s \in S$. Each such number $u$ is called an \textbf{upper bound} of $S$.
+
+		\item The set $S$ is said to be \textbf{bounded below} if there exists a number $w \in \R$ such that $w \leq s$ for all $s \in S$. Each such number $w$ is called a \textbf{lower bound} of $S$.
+
+		\item A set is said to be \textbf{bounded} if it is both bounded above and bounded below. A set is said to be \textbf{unbounded} if it is not bounded.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	Let $S$ be a nonempty subset of $\R$.
+	\begin{enumerate}
+		\item If $S$ is bounded above, then a number $u$ is said to be a \textbf{supremum} (or a \textbf{least upper bound}) of $S$ if it satisfies the conditions:
+		      \begin{enumerate}
+			      \item $u$ is an upper bound of $S$, and
+			      \item if $v$ is any upper bound of $S$, then $u \leq v$.
+		      \end{enumerate}
+
+		\item If $S$ is bounded below, then a number $w$ is said to be an \textbf{infimum} (or a \textbf{greatest lower bound}) of $S$ if it satisfies the conditions:
+		      \begin{enumerate}
+			      \item $w$ is a lower bound of $S$, and
+			      \item if $t$ is any lower bound of $S$, then $t \leq w$.
+		      \end{enumerate}
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+	A number $u$ is the supremum of a nonempty subset $S$ of $\R$ if and only if $u$ satisfies the conditions:
+	\begin{enumerate}
+		\item $s \leq u$ for all $s \in S$,
+		\item if $v < u$, then there exists $s' \in S$ such that $v < s'$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+	An upper bound $u$ of a nonempty set $S$ in $\R$ is the supremum of $S$ if and only if for every $\varepsilon > 0$ there exists an $s_\varepsilon \in S$ such that $u - \varepsilon < s_\varepsilon$.
+\end{lemma}
+
+\begin{theorem}[\textbf{The Completeness Property of $\R$}]
+	Every nonempty set of real numbers that has an upper bound also has a supremum in $\R$. (This property is also called the \textbf{Supremum Property of $\R$}).
+\end{theorem}

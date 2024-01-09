@@ -1,0 +1,50 @@
+\section{Limit Theorems}
+
+\begin{definition}
+	A sequence $X=(x_n)$ of real numbers is said to be \textbf{bounded} if there exists a real number $M>0$ such that $|x_n|\leq M$ for all $n \in \N$.
+	\\\\Thus, the sequence $(x_n)$ is bounded if and only if the set $\{x_n : n \in \N\}$ of its values is a bounded subset of $\R$.
+\end{definition}
+
+\begin{theorem}
+	A convergent sequence of real numbers is bounded.
+\end{theorem}
+
+\begin{theorem}
+	Let $X=(x_n)$ and $Y=(y_n)$ be sequences of real numbers that converge to $x$ and $y$, respectively, and let $c \in \R$.
+	\begin{enumerate}
+		\item Then the sequences $X+Y, X-Y, X \cdot Y$, and $cX$ converge to $x+y, x-y, xy$, and $cx$, respectively.
+
+		\item If $X=(x_n)$ converges to $x$ and $Z=(z_n)$ is a sequence of nonzero real numbers that converges to $z$ and if $z \neq 0$, then the quotient sequence $X/Z$ converges to $x/z$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	If $X=(x_n)$ is a convergent sequence of real numbers and if $x_n \geq 0$ for all $n \in \N$, then $x = \lim (x_n) \geq 0$.
+\end{theorem}
+
+\begin{theorem}
+	If $X=(x_n)$ and $Y=(y_n)$ are convergent sequences of real numbers and if $x_n \leq y_n$ for all $n \in \N$, then $\lim (x_n) \leq \lim (y_n)$.
+\end{theorem}
+
+\begin{theorem}
+	If $X=(x_n)$ is a convergent sequence and if $a \leq x_n \leq b$ for all $n \in \N$, then $a \leq \lim (x_n) \leq b$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Squeeze Theorem}]
+	Suppose that $X=(x_n), Y= (y_n)$, and $Z=(z_n)$ are sequences of real numbers such that
+	\[x_n \leq y_n \leq z_n\ \ \ \text{for all }\ \ \ n \in \N\]
+	and that $\lim (x_n) = \lim (z_n)$. Then $Y=(y_n)$ is convergent and
+	\[\lim (x_n) = \lim (y_n) = \lim (z_n).\]
+\end{theorem}
+
+\begin{theorem}
+	Let the sequence $X=(x_n)$ converge to $x$. Then the sequence $(|x_n|)$ of absolute values converges to $|x|$. That is, if $x=\lim (x_n)$, then $|x|=\lim (|x_n|)$.
+\end{theorem}
+
+\begin{theorem}
+	Let $X=(x_n)$ be a sequence of real numbers that converges to $x$ and suppose that $x_n \geq 0$. Then the sequence $(\sqrt{x_n})$ of positive square roots converges and $\lim (\sqrt{x_n})=\sqrt{x}$.
+\end{theorem}
+
+\begin{theorem}
+	Let $(x_n)$ be a sequence of positive real numbers such that $L := \lim (x_{n+1}/x_n)$ exists. If $L <1$, then $(x_n)$ converges and $\lim (x_n)=0$.
+\end{theorem}

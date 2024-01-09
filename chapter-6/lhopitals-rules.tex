@@ -1,0 +1,32 @@
+\section{L'Hopital's Rules}
+
+\begin{theorem}
+	Let $f$ and $g$ be defined on $[a,b]$, let $f(a)=g(a)=0$, and let $g(x) \neq 0$ for $a < x < b$. If $f$ and $g$ are differentiable at $a$ and if $g'(a) \neq 0$, then the limit of $f/g$ at $a$ exists and is equal to $f'(a)/g'(a)$. Thus
+	\[\lim\limits_{x\to a^+} \frac{f(x)}{g(x)} = \frac{f'(a)}{g'(a)}\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Cauchy Mean Value Theorem}]
+	Let $f$ and $g$ be continuous on $[a,b]$ and differentiable on $(a,b)$, and assume that $g'(x) \neq 0$ for all $x$ in $(a,b)$. Then there exists $c$ in $(a,b)$ such that
+	\[\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}\]
+\end{theorem}
+
+\begin{theorem}[\textbf{L'Hopital's Rule, I}]
+	Let $-\infty \leq a < b \leq \infty$ and let $f,g$ be differentiable on $(a,b)$ such that $g'(x) \neq 0$ for all $x \in (a,b)$. Suppose that
+	\[\lim\limits_{x\to a^+} f(x) = 0 = \lim\limits_{x\to a^+} g(x)\]
+
+	\begin{enumerate}
+		\item If $\lim\limits_{x\to a^+} \frac{f'(x)}{g'(x)}=L \in \R$, then $\lim\limits_{x\to a^+} \frac{f(x)}{g(x)}=L$.
+
+		\item If $\lim\limits_{x\to a^+} \frac{f'(x)}{g'(x)}=L \in \{-\infty, \infty\}$, then $\lim\limits_{x\to a^+} \frac{f(x)}{g(x)}=L$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{L'Hopital's Rule, II}]
+	Let $-\infty \leq a < b \leq \infty$ and let $f,g$ be differentiable on $(a,b)$ such that $g'(x) \neq 0$ for all $x \in (a,b)$. Suppose that
+	\[\lim\limits_{x\to a^+} g(x) = \pm \infty\]
+	\begin{enumerate}
+		\item If $\lim\limits_{x\to a^+} \frac{f'(x)}{g'(x)}=L \in \R$, then $\lim\limits_{x\to a^+} \frac{f(x)}{g(x)}=L$.
+
+		\item If $\lim\limits_{x\to a^+} \frac{f'(x)}{g'(x)}=L \in \{-\infty, \infty\}$, then $\lim\limits_{x\to a^+} \frac{f(x)}{g(x)}=L$.
+	\end{enumerate}
+\end{theorem}

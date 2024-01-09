@@ -1,0 +1,23 @@
+\section{Compact Sets}
+
+\begin{definition}
+	Let $A$ be a subset of $\R$. An \textbf{open cover} of $A$ is a collection $\mathcal{G}=\{G_\alpha\}$ of open sets in $\R$ whose union contains $A$; that is,
+	\[A \subseteq \bigcup_\alpha G_\alpha\]
+	If $\mathcal{G}'$ is a subcollection of sets from $\mathcal{G}$ such that the union of the sets in $\mathcal{G}'$ also contains $A$, then $\mathcal{G}'$ is called a \textbf{subcover} of $\mathcal{G}$. If $\mathcal{G}'$ consists of finitely many sets, then we call $\mathcal{G}'$ a \textbf{finite subcover} of $\mathcal{G}$.
+\end{definition}
+
+\begin{definition}
+	A subset $K$ of $\R$ is said to be \textbf{compact} if \textit{every} open cover of $K$ has a finite subcover.
+\end{definition}
+
+\begin{theorem}
+	If $K$ is a compact subset of $\R$, then $K$ is closed and bounded.
+\end{theorem}
+
+\begin{theorem}[\textbf{Heine-Borel Theorem}]
+	A subset $K$ of $\R$ is compact if and only if it is closed and bounded.
+\end{theorem}
+
+\begin{theorem}
+	A subset $K$ of $\R$ is compact if and only if every sequence in $K$ has a subsequence that converges to a point in $K$.
+\end{theorem}

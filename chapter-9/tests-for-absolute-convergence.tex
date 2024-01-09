@@ -1,0 +1,72 @@
+\section{Tests for Absolute Convergence}
+
+\begin{theorem}[\textbf{Limit Comparison Test, II}]
+	Suppose that $X:=(x_n)$ and $Y:=(y_n)$ are nonzero real sequences and suppose that the following limit exists in $\R$:
+	\[r:=\lim\abs{\frac{x_n}{y_n}}\]
+	\begin{enumerate}
+		\item If $r \neq 0$, then $\sum x_n$ is absolutely convergent if and only if $\sum y_n$ is absolutely convergent.
+		\item If $r=0$ and if $\sum y_n$ is absolutely convergent, then $\sum x_n$ is absolutely convergent.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Root Test}]
+	Let $X:=(x_n)$ be a sequence in $\R$.
+	\begin{enumerate}
+		\item If there exist $r \in \R$ with $r<1$ and $K \in \N$ such that
+		      \[|x_n|^{1/n}\leq r\ \ \text{for}\ \ n \geq K,\]
+		      then the series $\sum x_n$ is absolutely convergent.
+		\item If there exists $K \in \N$ such that
+		      \[|x_n|^{1/n} \geq 1\ \ \text{for}\ \ n \geq K,\]
+		      then the series $\sum x_n$ is divergent.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	Let $X:=(x_n)$ be a sequence in $\R$ and suppose that the limit
+	\[r:=\lim |x_n|^{1/n}\]
+	exists in $\R$. Then $\sum x_n$ is absolutely convergent when $r < 1$ and is divergent when $r > 1$.
+\end{corollary}
+
+\begin{theorem}[\textbf{Ratio Test}]
+	Let $X := (x_n)$ be a sequence of nonzero real numbers.
+	\begin{enumerate}
+		\item If there exist $r \in \R$ with $0<r<1$ and $K \in \N$ such that
+		      \[\abs{\frac{x_{n+1}}{x_n}}\leq r\ \ \text{for}\ \ n \geq K,\]
+		      then the series $\sum x_n$ is absolutely convergent.
+		\item If there exists $K \in \N$ such that
+		      \[\abs{\frac{x_{n+1}}{x_n}}\geq 1\ \ \text{for}\ \ n \geq K,\]
+		      then the series $\sum x_n$ is divergent.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	Let $X :=(x_n)$ be a nonzero sequence in $\R$ and suppose that the limit
+	\[r:=\lim\abs{\frac{x_{n+1}}{x_n}}\]
+	exists in $\R$. Then $\sum x_n$ is absolutely convergent when $r<1$ and is divergent when $r>1$.
+\end{corollary}
+
+\begin{theorem}[\textbf{Integral Test}]
+	Let $f$ be a positive, decreasing function on $\{t:t\geq 1\}$. Then the series $\sum\limits_{k=1}^{\infty}f(k)$ converges if and only if the improper integral
+	\[\displaystyle\int_{1}^{\infty}f(t)dt=\lim\limits_{b \to \infty}\displaystyle\int_{1}^{b}f(t)dt\]
+	exists. In the case of convergence, the partial sum $s_n=\sum\limits_{k=1}^{n}f(k)$ and the sum $s=\sum\limits_{k=1}^{\infty} f(k)$ satisfy the estimate
+	\[\displaystyle\int_{n+1}^{\infty}f(t)dt\leq s-s_n \leq \displaystyle\int_{n}^{\infty}f(t)dt\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Raabe's Test}]
+	Let $X:=(x_n)$ be a sequence of nonzero real numbers.
+	\begin{enumerate}
+		\item If there exist numbers $a >1$ and $K \in \N$ such that
+		      \[\abs{\frac{x_{n+1}}{x_n}}\leq 1 - \frac{a}{n}\ \ \text{for}\ \ n \geq K,\]
+		      then $\sum x_n$ is absolutely convergent.
+
+		\item If there exist real numbers $a \leq 1$ and $K \in \N$ such that
+		      \[\abs{\frac{x_{n+1}}{x_n}}\geq 1-\frac{a}{n}\ \ \text{for}\ \ n \geq K,\]
+		      then $\sum x_n$ is not absolutely convergent.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+	Let $X:=(x_n)$ be a nonzero sequence in $\R$ and let
+	\[a:=\lim \left(n \left(1-\abs{\frac{x_{n+1}}{x_n}}\right)\right)\]
+	whenever this limit exists. Then $\sum x_n$ is absolutely convergent when $a > 1$ and is not absolutely convergent when $a <1$.
+\end{corollary}

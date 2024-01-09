@@ -1,0 +1,67 @@
+\section{Approximate Integration}
+
+\textbf{Equal Partitions}
+If $f:[a,b] \to \R$ is continuous, we know that its Riemann integral exists. To find an approximate value for this integral with the minimum amount of calculation, it is convenient to consider partitions $\mathcal{P}_n$ of $[a,b]$ into \textit{n equal} subintervals having length $h_n:=(b-a)/n$. Hence $\mathcal{P}_n$ is the partition:
+\[a<a+h_n<a+2h_n<\dots<a+nh_n=b\]
+If we pick our tag points to be the \textit{left endpoints} and the \textit{right endpoints} of the subintervals, we obtain the \textbf{$n$th left approximation} given by
+\[L_n(f):=h_n\sum\limits_{k=1}^{n-1}f(a+kh_n)\]
+and the \textbf{$n$th right approximation} given by
+\[R_n(f):=h_n\sum\limits_{k=1}^{n}f(a+kh_n)\]
+
+\begin{theorem}
+	If $f:[a,b] \to \R$ is monotone and if $T_n(f)$ is given by
+	\[T_n(f):=h_n\left(\frac{1}{2}f(a)+\sum\limits_{k=1}^{n-1}f(a+kh_n)+\frac{1}{2}f(b)\right)\]
+	then
+	\[\left|\displaystyle\int_{a}^{b}f-T_n(f)\right|\leq |f(b)-f(a)|\cdot \frac{(b-a)}{2n}\]
+\end{theorem}
+
+Note that the function $T_n(f)$ defined above is called the \textbf{$n$th Trapezoidal Approximation} of $f$
+
+\begin{theorem}
+	Let $f,f',$ and $f''$ be continuous on $[a,b]$ and let $T_n(f)$ be the $n$th Trapezoidal Approximation. Then there exists $c \in [a,b]$ such that
+	\[T_n(f)-\displaystyle\int_{a}^{b}f=\frac{(b-a)h^2_n}{12}\cdot f''(c)\]
+\end{theorem}
+
+\begin{corollary}
+	Let $f,f',$ and $f''$ be continuous, and let $|f''(x)|\leq B_2$ for all $x \in [a,b]$. Then
+	\[\left|T_n(f)-\displaystyle\int_{a}^{b}f\right|\leq \frac{(b-a)h_n^2}{12} \cdot B_2 = \frac{(b-a)^3}{12n^2}\cdot B_2\]
+\end{corollary}
+
+If $\mathcal{P}_n$ is the equally spaced partition given before, the \textbf{Midpoint Approximation} of $f$ is given by
+\[M_n(f):=h_n\left(f\left(a+\frac{1}{2}h_n\right)+f\left(a+\frac{3}{2}h_n\right)+\dots+f\left(a\left(n-\frac{1}{2}\right)h_n\right)\right)=h_n\sum\limits_{k=1}^{n}f\left(a+\left(k-\frac{1}{2}\right)h_n\right)\]
+
+\begin{theorem}
+	Let $f,f',$ and $f''$ be continuous on $[a,b]$ and let $M_n(f)$ be the $n$th Midpoint Approximation. Then there exists $\gamma \in [a,b]$ such that
+	\[\displaystyle\int_{a}^{b}f-M_n(f)=\frac{(b-a)h_n^2}{24}\cdot f''(\gamma)\]
+\end{theorem}
+
+\begin{corollary}
+	Let $f,f',$ and $f''$ be continuous, and let $|f''(x)| \leq B_2$ for all $x \in [a,b]$. Then
+	\[\left|M_n(f)-\displaystyle\int_{a}^{b}f\right|\leq \frac{(b-a)h_n^2}{24}\cdot B_2=\frac{(b-a)^3}{24n^2}\cdot B_2\]
+\end{corollary}
+
+The \textbf{$n$th Simpson Approximation} is defined by
+\[S_n(f):=\frac{1}{3}h_n(f(a)+4f(a+h_n)+2f(a+2h_n)+4f(a+3h_n)+2f(a+4h_n)+\dots+2f(b-2h_n)+4f(b-h_n)+f(b))\]
+
+\begin{theorem}
+	Let $f,f',f'',f^{(3)}$, and $f^{(4)}$ be continuous on $[a,b]$ and let $n \in \N$ be even. If $S_n(f)$ is the $n$th Simpson Approximation, then there exists $c \in [a,b]$ such that
+	\[S_n(f)-\displaystyle\int_{a}^{b}f=\frac{(b-a)h_n^4}{180}\cdot f^{(4)}(c)\]
+\end{theorem}
+
+\begin{corollary}
+	Let $f,f',f'',f^{(3)},$ and $f^{(4)}$ be continuous on $[a,b]$ and let $|f^{(4)}| \leq B_4$ for all $x \in [a,b]$. Then
+	\[\left|S_n(f)-\displaystyle\int_{a}^{b}f\right|\leq \frac{(b-a)h_n^4}{180}\cdot B_4 = \frac{(b-a)^5}{180n^4}\cdot B_4\]
+\end{corollary}
+
+\begin{remark}
+	The $n$th Midpoint Approximation $M_n(f)$ can be used to "step up" to the $(2n)$th Trapezoidal and Simpson Approximations by using the formulas
+	\[T_{2n}(f)=\frac{1}{2}M_n(f)+\frac{1}{2}T_n(f)\ \ \ \ \text{and}\ \ \ \ S_{2n}(f)=\frac{2}{3}M_n(f)+\frac{1}{3}T_n(f)\]
+	that are given in the exercises. Thus once the initial Trapezoidal Approximation $T_1=T_1(f)$ has been calculated, only the Midpoint Approximation $M_n=M_n(f)$ need be found. That is, we employ the following sequence of calculations:
+	\[T_1=\frac{1}{2}(b-a)(f(a)+f(b));\]
+	\begin{align*}
+		M_1=(b-a)f(\frac{1}{2}(a+b)),\ \ \ \  & T_2=\frac{1}{2}M_1+\frac{1}{2}T_1, & S_2=\frac{2}{3}M_1+\frac{1}{3}T_1; \\
+		M_2,\ \ \ \                           & T_4=\frac{1}{2}M_2+\frac{1}{2}T_2, & S_4=\frac{2}{3}M_2+\frac{1}{3}T_2; \\
+		M_4,\ \ \ \                           & T_8=\frac{1}{2}M_4+\frac{1}{2}T_4, & S_8=\frac{2}{3}M_4+\frac{1}{3}T_4; \\
+		\dots,\ \ \ \                         & \dots,                             & \dots
+	\end{align*}
+\end{remark}

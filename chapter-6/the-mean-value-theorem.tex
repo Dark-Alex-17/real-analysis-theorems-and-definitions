@@ -1,0 +1,56 @@
+\section{The Mean Value Theorem}
+
+\begin{theorem}[\textbf{Interior Extremum Theorem}]
+	Let $c$ be an interior point of of the interval $I$ at which $f:I \rightarrow \R$ has a relative extremum. If the derivative of $f$ at $c$ exists, then $f'(c)=0$.
+\end{theorem}
+
+\begin{corollary}
+	Let $f:I \rightarrow \R$ be continuous on an interval $I$ and suppose that $f$ has a relative extremum at an interior point $c$ of $I$. Then either the derivative of $f$ at $c$ does not exist, or it is equal to zero.
+\end{corollary}
+
+\begin{theorem}[\textbf{Rolle's Theorem}]
+	Suppose that $f$ is continuous on a closed interval $I:= [a,b]$, that the derivative $f'$ exists at every point of the open interval $(a,b)$, and that $f(a)=f(b)=0$. Then there exists at least one point $c$ in $(a,b)$ such that $f'(c)=0$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Mean Value Theorem}]
+	Suppose that $f$ is continuous on a closed interval $I:=[a,b]$, and that $f$ has a derivative in the open interval $(a,b)$. Then there exists at least one point $c$ in $(a,b)$ such that
+	\[f(b)-f(a)=f'(c)(b-a)\]
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $f$ is continuous on the closed interval $I:= [a,b]$, that $f$ is differentiable on the open interval $(a,b)$, and that $f'(x)=0$ for $x \in (a,b)$. Then $f$ is constant on $I$.
+\end{theorem}
+
+\begin{corollary}
+	Suppose that $f$ and $g$ are continuous on $I:=[a,b]$, that they are differentiable on $(a,b)$, and that $f'(x)=g'(x)$ for all $x \in (a,b)$. Then there exists a constant $C$ such that $f = g+C$ on $I$.
+\end{corollary}
+
+\begin{theorem}
+	Let $f:I \rightarrow \R$ be differentiable on the interval $I$. Then:
+	\begin{enumerate}
+		\item $f$ is increasing on $I$ if and only if $f'(x) \geq 0$ for all $x \in I$.
+		\item $f$ is decreasing on $I$ if and only if $f'(x) \leq 0$ for all $x \in I$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{First Derivative Test for Extrema}]
+	Let $f$ be continuous on the interval $I:=[a,b]$ and let $c$ be an interior point of $I$. Assume that $f$ is differentiable on $(a,c)$ and $(c,b)$. Then:
+	\begin{enumerate}
+		\item If there is a neighborhood $(c-\delta, c+\delta)\subseteq I$ such that $f'(x) \geq 0$ for $c-\delta< x < c$ and $f'(x) \leq 0$ for $c < x < c + \delta$, then $f$ has a relative maximum at $c$.
+
+		\item If there is a neighborhood $(c-\delta, c+\delta) \subseteq I$ such that $f'(x) \leq 0$ for $c-\delta < x < c$ and $f'(x) \geq 0$ for $c < x < c+\delta$, then $f$ has a relative maximum at $c$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+	Let $I \subseteq \R$ be an interval, let $f:I \rightarrow \R$, let $c \in I$, and assume that $f$ has a derivative at $c$. Then:
+	\begin{enumerate}
+		\item If $f'(c) >0$, then there is a number $\delta > 0$ such that $f(x) > f(c)$ for $x \in I$ such that $c < x < c+ \delta$.
+
+		\item If $f'(c)<0$, then there is a number $\delta >0$ such that $f(x) > f(c)$ for $x \in I$ such that $c-\delta < x < c$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{theorem}[\textbf{Darboux's Theorem}]
+	If $f$ is differentiable on $I = [a,b]$ and if $k$ is a number between $f'(a)$ and $f'(b)$, then there is at least one point $c$ in $(a,b)$ such that $f'(c)=k$.
+\end{theorem}

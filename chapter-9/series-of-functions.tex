@@ -1,0 +1,100 @@
+\section{Series of Functions}
+
+\begin{definition}
+	If $(f_n)$ is a sequence of functions defined on a subset $D$ of $\R$ with values in $\R$, the sequence of \textbf{partial sums} $(s_n)$ of the infinite series $\sum f_n$ is defined for $x$ in $D$ by
+	\begin{align*}
+		s_1(x)          & :=f_1(x)                       \\
+		s_2(x)          & :=s_1(x)+f_2(x)                \\
+		\dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
+		s_{n+1}(x)      & :=s_n(x)+f_{n+1}(x)            \\
+		\dots\dots\dots & \dots\dots\dots\dots\dots\dots
+	\end{align*}
+	In case the sequence $(s_n)$ of functions converges on $D$ to a function $f$, we say that the infinite series of functions $\sum f_n$ \textbf{converges} to $f$ on $D$. We will often write
+	\[\sum f_n\ \ \text{or}\ \ \sum\limits_{n=1}^{\infty}f_n\]
+	to denote either the series or the limit function, when it exists.
+	\\\\If the series $\sum |f_n(x)|$ converges for each $x$ in $D$, we say that $\sum f_n$ is \textbf{absolutely convergent} on $D$. If the sequence $(s_n)$ of partial sums is uniformly convergent on $D$ to $f$, we say that $\sum f_n$ is \textbf{uniformly convergent} on $D$, or that it \textbf{converges to $f$ uniformly on $D$}.
+\end{definition}
+
+\begin{theorem}
+	If $f_n$ is continuous on $D \subseteq \R$ to $\R$ for each $n \in \N$ and if $\sum f_n$ converges to $f$ uniformly on $D$, then $f$ is continuous on $D$.
+\end{theorem}
+
+\begin{theorem}
+	Suppose that the real-valued functions $f_n,\ n \in \N$ are Riemann integrable on the interval $J:=[a,b]$. If the series $\sum f_n$ converges to $f$ uniformly on $J$, then $f$ is Riemann integrable and
+	\[\displaystyle\int_{a}^{b}f=\sum\limits_{n=1}^{\infty}\displaystyle\int_{a}^{b}f_n\]
+\end{theorem}
+
+\begin{theorem}
+	For each $n \in \N$, let $f_n$ be a real-valued function on $J:=[a,b]$ that has a derivative $f'_n$ on $J$. Suppose that the series $\sum f_n$ converges for at least one point of $J$ and that the series of derivatives $\sum f'_n$ converges uniformly on $J$.
+	\\Then there exists a real-valued function $f$ on $J$ such that $\sum f_n$ converges uniformly on $J$ to $f$. In addition, $f$ has a derivative on $J$ and $f'=\sum f'_n$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Cauchy Criterion}]
+	Let $(f_n)$ be a sequence of functions on $D\subseteq \R$ to $\R$. The series $\sum f_n$ is uniformly convergent on $D$ if and only if for every $\varepsilon >0$ there exists an $M(\varepsilon)$ such that if $m>n\geq M(\varepsilon)$, then
+	\[|f_{n+1}(x)+\dots+f_m(x)|<\varepsilon\ \forall\ x \in D\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Weierstrass M-Test}]
+	Let $(M_n)$ be a sequence of positive real numbers such that $|f_n(x)|\leq M_n$ for $x \in D$, $n \in \N$. If the series $\sum M_n$ is convergent, then $\sum f_n$ is uniformly convergent on $D$, $\sum |f_n|$ is uniformly convergent on $D$, and $\sum f_n$ is absolutely convergent on $D$.
+\end{theorem}
+
+\begin{definition}
+	A series of real functions $\sum f_n$ is said to be a \textbf{power series around $x=c$} if the function $f_n$ has the form
+	\[f_n(x)=a_n(x-c)^n\]
+	where $a_n$ and $c$ belong to $\R$ and where $n=0,1,2,\dots$.
+\end{definition}
+
+\begin{definition}
+	Let $\sum a_nx^n$ be a power series. If the sequence $(|a_n|^{1/n})$ is bounded, we set $\rho := \lim\sup(|a_n|^{1/n});$ if this sequence is not bounded we set $\rho=+\infty$. We define the \textbf{radius of convergence} of $\sum a_nx^n$ to be given by
+	\[R:=\begin{cases}
+			0       & \text{if } \rho = +\infty \\
+			1/\rho  & \text{if } 0<\rho<+\infty \\
+			+\infty & \text{if } \rho=0
+		\end{cases}\]
+	The \textbf{interval of convergence} is the open interval $(-R, R)$.
+\end{definition}
+
+\begin{theorem}[\textbf{Cauchy-Hadamard Theorem}]
+	If $R$ is the radius of convergence of the power series $\sum a_nx^n$, then the series is absolutely convergent if $|x|<R$ and is convergent if $|x|>R$.
+\end{theorem}
+
+\begin{remark}
+	It will be noted that the Cauchy-Hadamard Theorem makes no statement as to whether the power series converges when $|x|=R$. Indeed, anything can happen, as the examples
+	\[\sum x^n,\ \sum \frac{1}{n}x^n,\ \sum \frac{1}{n^2}x^n\]
+	show. Since $\lim(n^{1/n})=1$, each of these power series has a radius of convergence equal to 1. The first power series converges at neither of the points $x=-1$ and $x=+1$; the second series converges at $x=-1$ but diverges at $x=+1$; and the third power series converges at both $x=-1$ and $x=+1$. (Find a power series with $R=1$ that converges at $x=+1$ but diverges at $x=-1$.)
+\end{remark}
+
+\begin{theorem}
+	Let $R$ be the radius of convergence of $\sum a_nx^n$ and let $K$ be a closed and bounded interval contained in the interval of convergence $(-R, R)$. Then the power series converges uniformly on $K$.
+\end{theorem}
+
+\begin{theorem}
+	Let $\sum a_n(x-c)^n$ be a power series. Then either
+	\begin{enumerate}
+		\item The series is absolutely convergent on $\R$
+		\item The series converges only at one point, $x=c$
+		\item There exists $R \in \R$ such that $\sum a_n(x-c)^n$ is absolutely convergent for all $|x-c|<R$, and is divergent for all $|x-c|>R$. (Note that the endpoints must be tested separately.)
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	The limit of a power series is continuous on the interval of convergence. A power series can be integrated term-by-term over any closed and bounded interval contained in the interval of convergence.
+\end{theorem}
+
+\begin{theorem}[\textbf{Differentiation Theorem}]
+	A power series can be differentiated term-by-term within the interval of convergence. In fact, if
+	\[f(x)=\sum\limits_{n=0}^{\infty}a_nx^n,\ \ \text{  then  }\ \ f'(x)=\sum\limits_{n=1}^{\infty}na_nx^{n-1}\ \ \text{  for  }\ \ |x|<R.\]
+	Both series have the same radius of convergence.
+\end{theorem}
+
+\begin{remark}
+	It is to be observed that the theorem makes no assertion about the endpoints of the interval of convergence. If a series is convergent at an endpoint, then the differentiated series may or may not be convergent at this point.
+\end{remark}
+
+\begin{theorem}[\textbf{Uniqueness Theorem}]
+	If $\sum a_nx^n$ and $\sum b_nx^n$ converge on some interval $(-r,r)$, $r>0$, to the same function $f$, then
+	\[a_n=b_n\ \forall\ n \in \N\]
+\end{theorem}
+
+The Taylor Series is
+\[f(x)=\sum\limits_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}(x-c)^n\]

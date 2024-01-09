@@ -1,0 +1,39 @@
+\section{Sequences and Their Limits}
+
+\begin{definition}
+	A \textbf{sequence of real numbers} (or a \textbf{sequence in $\R$}) is a function defined on the set $\N = \{1,2,\dots\}$ of natural numbers whose range is contained in the set $\R$ of real numbers.
+\end{definition}
+
+\begin{definition}
+	A sequence $X = (x_n)$ in $\R$ is said to \textbf{converge} to $x \in \R$, or $x$ is said to be a \textbf{limit} of $(x_n)$, if for every $\varepsilon >0$ there exists a natural number $K(\varepsilon)$ such that for all $n \geq K(\varepsilon)$, the terms $x_n$ satisfy $|x_n-x|<\varepsilon$.
+	\\If a sequence has a limit, we say that the sequence is \textbf{convergent}; if it has no limit, we say that the sequence is \textbf{divergent}.
+\end{definition}
+
+\begin{theorem}[\textbf{Uniqueness of Limits}]
+	A sequence in $\R$ can have at most one limit.
+\end{theorem}
+
+\begin{theorem}
+	Let $X = (x_n)$ be a sequence of real numbers, and let $x \in \R$. The following statements are equivalent:
+	\begin{enumerate}
+		\item $X$ converges $x$.
+		\item For every $\varepsilon > 0$, there exists a natural number $K$ such that for all $n \geq K$, the terms $x_n$ satisfy $|x_n -x| < \varepsilon$.
+		\item For every $\varepsilon >0$, there exists a natural number $K$ such that for all $n \geq K$, the terms $x_n$ satisfy $x-\varepsilon < x_n < x+\varepsilon$.
+		\item For every $\varepsilon$-neighborhood $V_\varepsilon(x)$ of $x$, there exists a natural number $K$ such that for all $n \geq K$, the terms $x_n$ belong to $V_\varepsilon(x)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}
+	If $X=(x_1, x_2, \dots, x_n, \dots)$ is a sequence of real numbers and if $m$ is a given natural number, then the $m$-\textbf{tail} of $X$ is the sequence
+	\[X_m := (x_{m+n}: n \in \N)=(x_{m+1}, x_{m+2}, \dots)\]
+\end{definition}
+
+\begin{theorem}
+	Let $X=(x_n:n \in \N)$ be a sequence of real numbers and let $m \in \N$. Then the $m$-tail $X_m=(x_{m+n}:n \in \N)$ of $X$ converges if and only if $X$ converges. In this case, $\lim X_m = \lim X$.
+\end{theorem}
+
+\begin{theorem}
+	Let $(x_n)$ be a sequence of real numbers and let $x \in \R$. If $(a_n)$ is a sequence of positive real numbers with $\lim (a_n)=0$ and if for some constant $C >0$ and some $m \in \N$ we have
+	\[|x_n - x| \leq Ca_n\ \ \ \ \text{ for all }\ \ \ \ n \geq m\]
+	then it follows that $\lim (x_n) = x$.
+\end{theorem}

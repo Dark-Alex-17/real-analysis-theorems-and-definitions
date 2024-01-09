@@ -1,0 +1,30 @@
+\section{Absolute Convergence}
+
+\begin{definition}
+	Let $X:=(x_n)$ be a sequence in $\R$. We say that the series $\sum x_n$ is \textbf{absolutely convergent} if the series $\sum |x_n|$ is convergent in $\R$. A series is said to be \textbf{conditionally} ( or \textbf{nonabsolutely}) \textbf{convergent} if it is convergent, but it is not absolutely convergent.
+\end{definition}
+
+\begin{theorem}
+	If a series in $\R$ is absolutely convergent, then it is convergent.
+\end{theorem}
+
+\begin{theorem}
+	If a series $\sum x_n$ is convergent, then any series obtained from it by grouping  the terms is also convergent and to the same value.
+\end{theorem}
+
+\begin{definition}
+	A series $\sum y_k$ in $\R$ is a \textbf{rearrangement} of a series $\sum x_n$ if there is a bijection $f$ of $\N$ onto $\N$ such that $y_k=x_{f(k)}$ for all $k \in \N$.
+\end{definition}
+
+\begin{theorem}[\textbf{Rearrangement Theorem}]
+	Let $\sum x_n$ be an absolutely convergent series in $\R$. Then any rearrangement $\sum y_k$ of $\sum x_n$ converges to the same value.
+\end{theorem}
+
+\begin{theorem}
+	If $\sum a_n$ is conditionally convergent, then there exists a rearrangement of $\sum a_n$ such that
+	\begin{enumerate}
+		\item The rearrangement converges to any real number $\alpha$
+		\item The rearrangement diverges to $\pm \infty$
+		\item The rearrangement oscillates between any two real numbers.
+	\end{enumerate}
+\end{theorem}

@@ -1,0 +1,23 @@
+\section{Continuous Functions}
+
+\begin{definition}
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and let $c \in A$. We say that $f$ is \textbf{continuous at} $c$ if, given any number $\varepsilon > 0$, there exists $\delta > 0$ such that if $x$ is any point of $A$ satisfying $|x-c|<\delta$, then $|f(x)-f(c)|<\varepsilon$.
+	\\If $f$ fails to be continuous at $c$, then we say that $f$ is \textbf{discontinuous at} $c$.
+\end{definition}
+
+\begin{theorem}
+	A function $f:A \rightarrow \R$ is continuous at a point $c \in A$ if and only if given any $\varepsilon$-neighborhood $V_\varepsilon (f(c))$ of $f(c)$ there exists a $\delta$-neighborhood $V_\varepsilon(c)$ of $c$ such that if $x$ is any point of $A \cap V_\delta(c)$, then $f(x)$ belongs to $V_\varepsilon (f(c))$, that is
+	\[f(A \cap V_\varepsilon (c)) \subseteq V_\varepsilon (f(c))\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Sequential Criterion for Continuity}]
+	A function $f:A \rightarrow \R$ is continuous at the point $c \in A$ if and only if for every sequence $(x_n)$ in $A$ that converges to $c$, the sequence $(f(x_n))$ converges to $f(c)$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Discontinuity Criterion}]
+	Let $A \subseteq \R$, let $f:A \rightarrow \R$, and let $c \in A$. Then $f$ is discontinuous at $c$ if and only if there exists a sequence $(x_n)$ in $A$ such that $(x_n)$ converges to $c$, but the sequence $(f(x_n))$ does not converge to $f(c)$.
+\end{theorem}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f: A \rightarrow \R$. If $B$ is a subset of $A$, we say that $f$ is \textbf{continuous on the set} $B$ if $f$ is continuous at every point of $B$.
+\end{definition}

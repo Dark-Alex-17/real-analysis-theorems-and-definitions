@@ -1,0 +1,96 @@
+\section{Definition and Main Properties}
+
+In \textit{Definition 5.2.2}, we defined a \textbf{gauge} on $[a,b]$ to be a strictly positive function $\delta:[a,b] \to (0,\infty)$. Further, a tagged partition $\dot{\mathcal{P}}:=\{(I_i,t_i)\}_{i=1}^n$ of $[a,b]$, where $I_i:=[x_{i-1},x_i]$, is said to be \textbf{$\delta$-fine} in the case
+\[t_i \in I_i \subseteq [t_i-\delta(t_i),t_i+\delta(t_i)]\ \ \text{for}\ \ i=1,\dots,n\]
+
+\begin{definition}
+	A function $f:[a,b] \to \R$ is said to be \textbf{\textit{generalized} Riemann integrable} on $[a,b]$ if there exists a number $L\in\R$ such that for every $\varepsilon>0$ there exists a gauge $\delta_\varepsilon$ on $[a,b]$ such that if $\dot{\mathcal{P}}$ is any $\delta_\varepsilon$-fine partition of $[a,b]$, then
+	\[|S(f;\dot{\mathcal{P}})-L|<\varepsilon\]
+	The collection of all generalized Riemann integrable functions will usually be denoted by $\mathcal{R}^*[a,b]$.
+	\\\\	It will be shown that if $f \in \mathcal{R}^*[a,b]$, then the number $L$ is uniquely determined; it will be called the \textbf{generalized Riemann integral of $f$} over $[a,b]$. It will also be shown that if $f \in \mathcal{R}[a,b]$, then $f \in \mathcal{R}^*[a,b]$ and the value of the two integrals is the same. Therefore, it will not cause any ambiguity if we also denote the generalized Riemann integral of $f \in \mathcal{R}^*[a,b]$ by the symbols
+	\[\displaystyle\int_{a}^{b}f\ \ \text{  or  }\ \ \displaystyle\int_{a}^{b}f(x)dx\]
+\end{definition}
+
+\begin{theorem}[\textbf{Uniqueness Theorem}]
+	If $f \in \mathcal{R}^*[a,b]$, then the value of the integral is uniquely determined.
+\end{theorem}
+
+\begin{theorem}[\textbf{Consistency Theorem}]
+	If $f \in \mathcal{R}[a,b]$ with integral $L$, then also $f \in \mathcal{R}^*[a,b]$ with integral $L$.
+\end{theorem}
+
+\begin{theorem}
+	Suppose that $f$ and $g$ are in $\mathcal{R}^*[a,b]$. Then:
+	\begin{enumerate}
+		\item If $k \in \R$, the function $kf$ is in $\mathcal{R}^*[a,b]$ and
+		      \[\displaystyle\int_{a}^{b}kf=k\displaystyle\int_{a}^{b}f\]
+
+		\item The function $f+g$ is in $\mathcal{R}^*[a,b]$ and
+		      \[\displaystyle\int_{a}^{b}(f+g)=\displaystyle\int_{a}^{b}f+\displaystyle\int_{a}^{b}g\]
+
+		\item If $f(x)\leq g(x)$ for all $x \in [a,b]$, then
+		      \[\displaystyle\int_{a}^{b}f \leq \displaystyle\int_{a}^{b}g\]
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Cauchy Criterion}]
+	A function $f:[a,b] \to \R$ belongs to $\mathcal{R}^*[a,b]$ if and only if for every $\varepsilon >0$ there exists a gauge $\eta_\varepsilon$ on $[a,b]$ such that if $\dot{\mathcal{P}}$ and $\dot{\mathcal{Q}}$ are any partitions of $[a,b]$ that are $\eta_\varepsilon$-fine, then
+	\[|S(f;\dot{\mathcal{P}})-S(f;\dot{\mathcal{Q}})|<\varepsilon\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Squeeze Theorem}]
+	Let $f:[a,b] \to \R$. Then $f \in \mathcal{R}^*[a,b]$ if and only if for every $\varepsilon>0$ there exist functions $\alpha_\varepsilon$ and $\omega_\varepsilon$ in $\mathcal{R}^*[a,b]$ with
+	\[\alpha_\varepsilon(x) \leq f(x) \leq \omega_\varepsilon(x)\ \forall\ x \in [a,b]\]
+	and such that
+	\[\displaystyle\int_{a}^{b}(\omega_\varepsilon-\alpha_\varepsilon) \leq \varepsilon\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Additivity Theorem}]
+	Let $f:[a,b] \to \R$ and let $c \in (a,b)$. Then $f \in \mathcal{R}^*[a,b]$ if and only if its restrictions to $[a,c]$ and $[c,b]$ are both generalized Riemann integrable. In this case
+	\[\displaystyle\int_{a}^{b}f=\displaystyle\int_{a}^{c}f+\displaystyle\int_{c}^{b}f\]
+\end{theorem}
+
+\begin{theorem}[\textbf{The Fundamental Theorem of Calculus (First Form)}]
+	Suppose there exists a \textbf{countable} set $E$ in $[a,b]$, and functions $f,F:[a,b] \to \R$ such that:
+	\begin{enumerate}
+		\item $F$ is continuous on $[a,b]$.
+		\item $F'(x)=f(x)$ for all $x \in [a,b]\setminus E$.
+		      \\Then $f$ belongs to $\mathcal{R}^*[a,b]$ and
+		      \[\displaystyle\int_{a}^{b}f=F(b)-F(a)\]
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Fundamental Theorem of Calculus (Second Form)}]
+	Let $f$ belong to $\mathcal{R}^*[a,b]$ and let $F$ be the indefinite integral of $f$. Then we have:
+	\begin{enumerate}
+		\item $F$ is continuous on $[a,b]$.
+		\item There exists a null set $Z$ such that if $x \in [a,b]\setminus Z$, then $F$ is differentiable at $x$ and $F'(x)=f(x)$.
+		\item If $f$ is continuous at $c \in [a,b]$, then $F'(c)=f(c)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Substitution Theorem}]
+	\begin{enumerate}
+		\item[]
+		\item Let $I:=[a,b]$ and $J:=[\alpha, \beta]$, and let $F:I \to \R$ and $\varphi:J \to \R$ be continuous functions with $\varphi(J)\subseteq I$.
+		\item Suppose there exist sets $E_f \subset I$ and $E_\varphi\subset J$ such that $f(x)=F'(x)$ for $x \in I\setminus E_f$, that $\varphi'(t)$ exists for $t \in J\setminus E_\varphi$, and that $E:=\varphi^{-1}(E_f)\cup E_\varphi$ is countable.
+		\item Set $f(x):=0$ for $x \in E_f$ and $\varphi'(t):=0$ for $t \in E_\varphi$. We conclude that $f \in \mathcal{R}^*(\varphi(J))$, that $(f \circ \varphi)\cdot \varphi^t \in \mathcal{R}^*(J)$ and that
+		      \[\displaystyle\int_{\alpha}^{\beta}(f \circ \varphi)\cdot\varphi^t=F\circ\varphi\left.\right|_\alpha^\beta=\displaystyle\int_{\varphi(\alpha)}^{\varphi(\beta)}f\]
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Multiplication Theorem}]
+	If $f \in \mathcal{R}^*[a,b]$ and if $g$ is a monotone function on $[a,b]$, then the product $f \cdot g$ belongs to $\mathcal{R}^*[a,b]$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Integration by Parts Theorem}]
+	Let $F$ and $G$ be differentiable on $[a,b]$. Then $F'G$ belongs to $\mathcal{R}^*[a,b]$ if and only if $FG'$ belongs to $\mathcal{R}^*[a,b]$. In this case we have
+	\[\displaystyle\int_{a}^{b}F'G=FG\left.\right|_a^b-\displaystyle\int_{a}^{b}FG'\]
+\end{theorem}
+
+\begin{theorem}[\textbf{Taylor's Theorem}]
+	Suppose that $f,f',f'',\dots,f^{(n)}$ and $f^{(n+1)}$ exist on $[a,b]$. Then we have
+	\[f(b)=f(a)+\frac{f'(a)}{1!}(b-a)+\dots+\frac{f^{(n)}(a)}{n!}(b-a)^n+R_n\]
+	where the remainder is given by
+	\[R_n=\frac{1}{n!}\displaystyle\int_{a}^{b}f^{(n+1)}(t)\cdot(b-t)^n dt\]
+\end{theorem}

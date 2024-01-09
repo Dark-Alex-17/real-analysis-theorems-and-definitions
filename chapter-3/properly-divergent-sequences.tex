@@ -1,0 +1,34 @@
+\section{Properly Divergent Sequences}
+
+\begin{definition}
+	Let $(x_n)$ be a sequence of real numbers.
+	\begin{enumerate}
+		\item We say that $(x_n)$ \textbf{tends to} $\pm \infty$, and write $\lim (x_n) = +\infty$, if for every $\alpha \in \R$ there exists a natural number $K(\alpha)$ such that if $n \geq K(\alpha)$, then $x_n > \alpha$.
+
+		\item We say that $(x_n)$ \textbf{tends to} $-\infty$, and write $\lim (x_n) = -\infty$, if for every $\beta \in \R$ there exists a natural number $K(\beta)$ such that if $n \geq K(\beta)$, then $x_n <  \beta$.
+	\end{enumerate}
+	We say that $(x_n)$ is \textbf{properly divergent} in case we have either $\lim (x_n)=+\infty$, or $\lim (x_n)=-\infty$.
+\end{definition}
+
+\begin{theorem}
+	A monotone sequence of real numbers is properly divergent if and only if it is unbounded.
+	\begin{enumerate}
+		\item If $(x_n)$ is an unbounded increasing sequence, then $\lim (x_n)=+\infty$.
+		\item If $(x_n)$ is an unbounded decreasing sequence, then $\lim (x_n) = -\infty$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $(x_n)$ and $(y_n)$ be two sequences of real numbers and suppose that
+	\[x_n \leq y_n\ \ \ \text{for all}\ \ \ n \in \N\]
+	\begin{enumerate}
+		\item If $\lim (x_n) = +\infty$, then $\lim (y_n)=+\infty$.
+		\item If $\lim (y_n) = -\infty$, then $\lim (x_n)=-\infty$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Let $(x_n)$ and $(y_n)$ be two sequences of positive real numbers and suppose that for some $L \in \R, L>0$, we have
+	\[\lim (x_n/y_n)=L\]
+	Then $\lim (x_n)=+\infty$ if an only if $\lim (y_n)=+\infty$.
+\end{theorem}

@@ -1,0 +1,66 @@
+\section{Uniform Continuity}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. We say that $f$ is \textbf{uniformly continuous} on $A$ if for each $\varepsilon > 0$ there is a $\delta (\varepsilon) > 0$ such that if $x,u \in A$ are any numbers satisfying $|x-u|<\delta (\varepsilon)$, then $|f(x)-f(u)| < \varepsilon$.
+\end{definition}
+
+\begin{theorem}[\textbf{Nonuniform Continuity Criteria}]
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. Then the following statements are equivalent:
+	\begin{enumerate}
+		\item $f$ is not uniformly continuous on $A$.
+
+		\item There exists an $\varepsilon_0 > 0$ such that for every $\delta > 0$ there are points $x_\delta, u_\delta$ in $A$ such that $|x_\delta - u_\delta|<\delta$ and $|f(x_\delta) - f(u_\delta)| \geq \varepsilon_0$.
+
+		\item There exists an $\varepsilon_0 > 0$ and two sequences $(x_n)$ and $(u_n)$ in $A$ such that $\lim (x_n - u_n)=0$ and $|f(x_n)-f(u_n)|\geq \varepsilon_0=1$ for all $n \in \N$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Uniform Continuity Theorem}]
+	Let $I$ be a closed bounded interval and let $f:I \rightarrow \R$ be continuous on $I$. Then $f$ is uniformly continuous on $I$.
+\end{theorem}
+
+\begin{definition}
+	Let $A \subseteq \R$ and let $f:A \rightarrow \R$. If there exists a constant $K > 0$ such that
+	\[(4)\ \ \ \ \ \ \ \ |f(x)-f(u)| \leq K|x-u|\]
+	for all $x,u \in A$, then $f$ is said to be a \textbf{Lipschitz function} (or to satisfy a \textbf{Lipschitz condition}) on $A$.\\
+
+	The condition $(4)$ that a function $f: I \to \R$ on an interval $I$ is a Lipschitz function can be interpreted geometrically as follows. If we write the condition as
+	\[\abs{\frac{f(x)-f(u)}{x-u}}\leq K,\ x,u \in I,\ x \neq u,\]
+	then the quantity inside the absolute values is the slope of a line segment joining the points $(x,f(x))$ and $(u,f(u))$. Thus a function $f$ satisfies a Lipschitz condition if and only if the slopes of all line segments joining two points on the graph of $y=f(x)$ over $I$ are bounded by some number $K$.
+\end{definition}
+
+\begin{theorem}
+	If $f:A \rightarrow \R$ is a Lipschitz function, then $f$ is uniformly continuous on $A$.
+\end{theorem}
+
+\begin{theorem}
+	If $f:A \rightarrow \R$ is uniformly continuous on a subset $A$ of $\R$ and if $(x_n)$ is a Cauchy sequence in $A$, then $(f(x_n))$ is a Cauchy sequence in $\R$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Continuous Extension Theorem}]
+	A function $f$ is uniformly continuous on the interval $(a,b)$ if and only if it can be defined at the endpoints $a$ and $b$ such that the extended function is continuous on $[a,b]$.
+\end{theorem}
+
+\begin{definition}
+	A function $s:[a,b] \rightarrow \R$ is called a \textbf{step function} if $[a,b]$ is the union of a finite number of nonoverlapping intervals $I_1, I_2, \dots, I_n$ such that $s$ is constant on each interval, that is, $s(x)=c_k$ for all $x \in I_k,\ k=1,2, \dots, n$.
+\end{definition}
+
+\begin{theorem}
+	Let $I$ be a closed bounded interval and let $f:I \rightarrow \R$ be continuous on $I$. If $\varepsilon > 0$, then there exists a step function $s_\varepsilon : I \rightarrow \R$ such that $|f(x) - s_\varepsilon(x)| < \varepsilon$ for all $x \in I$.
+\end{theorem}
+
+\begin{corollary}
+	Let $I:=[a,b]$ be a closed bounded interval and let $f: I \rightarrow \R$ be continuous on $I$. If $\varepsilon > 0$, there exists a natural number $m$ such that if we divide $I$ into $m$ disjoint intervals $I_k$ having length $h:= (b-a /m)$, then the step function $s_\varepsilon$ defined in equation (5) satisfies $|f(x) - s_\varepsilon (x)| < \varepsilon$ for all $x \in I$.
+\end{corollary}
+
+\begin{definition}
+	Let $I:= [a,b]$ be an interval. Then a function $g:I \rightarrow \R$ is said to be \textbf{piecewise linear} on $I$ if $I$ is the union of a finite number of disjoint intervals $I_1, \dots, I_m$, such that the restriction of $g$ to each interval $I_k$ is a linear function.
+\end{definition}
+
+\begin{theorem}
+	Let $I$ be a closed bounded interval and let $:I \rightarrow \R$ be continuous on $I$. If $\varepsilon > 0$, then there exists a continuous piecewise linear function $g_\varepsilon : I \rightarrow \R$ such that $|f(x) - g_\varepsilon (x)| < \varepsilon$ for all $ x \in I$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Wierstrass Approximation Theorem}]
+	Let $I=[a,b]$ and let $f: I \rightarrow \R$ be a continuous function. If $\varepsilon > 0$ is given, then there exists a polynomial function $p_\varepsilon$ such that $|f(x) - p_\varepsilon (x)| < \varepsilon$ for all $ x \in I$.
+\end{theorem}

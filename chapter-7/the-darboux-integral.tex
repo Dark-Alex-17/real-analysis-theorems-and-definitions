@@ -1,0 +1,62 @@
+\section{The Darboux Integral}
+
+\begin{definition}[\textbf{Upper and Lower Sums}]
+	Let $f:I \to \R$ be a bounded function on $I=[a,b]$ and let $\mathcal{P}=(x_0,x_1,\dots,x_n)$ be a partition of $I$. for $k=1,2,\dots,n$ we let
+	\[m_k:=\inf \{f(x):x \in [x_{k-1},x_k]\},\ \ \ \ M_k:=\sup \{f(x):x \in [x_{k-1},x_k]\}\]
+	The \textbf{lower sum} of $f$ corresponding to the partition $\mathcal{P}$ is defined to be
+	\[L(f;\mathcal{P}):= \sum\limits_{k=1}^{n}m_k(x_k-x_{k-1})\]
+	and the \textbf{upper sum} of $f$ corresponding to $\mathcal{P}$ is defined to be
+	\[U(f;\mathcal{P}):=\sum\limits_{k=1}^{n}M_k(x_k-x_{k-1})\]
+\end{definition}
+
+\begin{lemma}
+	If $f:=I\to\R$ is bounded and $\mathcal{P}$ is any partition of $I$, then $L(f;\mathcal{P})\leq U(f;\mathcal{P})$.
+\end{lemma}
+
+\begin{definition}
+	If $\mathcal{P}:=(x_0,x_1,\dots,x_n)$ and $\mathcal{Q}:=(y_0,y_1,\dots,y_m)$ are partitions of $I$, we say that $\mathcal{Q}$ is a \textbf{refinement of } $\mathcal{P}$ if each partition point $x_k \in \mathcal{P}$ also belongs to $\mathcal{Q}$ (that is, if $\mathcal{P} \subseteq \mathcal{Q}$). A refinement $\mathcal{Q}$ of a partition $\mathcal{P}$ can be obtained by adjoining a finite number of points to $\mathcal{P}$.
+\end{definition}
+
+\begin{lemma}
+	If $f:I\to\R$ is bounded, if $\mathcal{P}$ is a partition of $I$, and if $Q$ is a refinement of $\mathcal{P}$, then
+	\[L(f;\mathcal{P})\leq L(f;\mathcal{Q})\ \text{ and }\ U(f;\mathcal{Q})\leq U(f;\mathcal{P})\]
+\end{lemma}
+
+\begin{lemma}
+	Let $f:I\to\R$ be bounded. If $\mathcal{P}_1,\mathcal{P}_2$ are any two partitions of $I$, then $L(f;\mathcal{P}_1)\leq U(f;\mathcal{P}_2)$.
+\end{lemma}
+
+\begin{definition}
+	We shall denote the collection of all partitions of the interval $I$ by $\mathscr{P}(I)$. Let $I:=[a,b]$ and let $f:I \to \R$ be a bounded function. The \textbf{lower integral of $f$ on $I$} is the number
+	\[L(f):=\sup\{L(f;\mathcal{P}):\mathcal{P} \in \mathscr{P}(I)\}\]
+	and the \textbf{upper integral of $f$ on $I$} is the number
+	\[U(f):=\inf\{U(f;\mathcal{P}):\mathcal{P} \in \mathscr{P}(I)\}\]
+\end{definition}
+
+\begin{theorem}
+	Let $I=[a,b]$ and let $f:I \to \R$ be a bounded function. Then the lower integral $L(f)$ and the upper integral $U(f)$ of $f$ on $I$ exist. Moreover,
+	\[L(f)\leq U(f)\]
+\end{theorem}
+
+\begin{definition}
+	Let $I=[a,b]$ and let $f:I \to \R$ be a bounded function. Then $f$ is said to be \textbf{Darboux integrable on $I$} if $L(f)=U(f)$. In this case the \textbf{Darboux Integral of $f$ over $I$} is defined to be the value $L(f)=U(f)$.
+\end{definition}
+
+\begin{theorem}[\textbf{Integrability Criterion}]
+	Let $I:=[a,b]$ and let $f:I \to \R$ be a bounded function on $I$. Then $f$ is Darboux integrable on $I$ if and only if for each $\varepsilon > 0$ there is a partition $\mathcal{P}_\varepsilon$ of $I$ such that
+	\[U(f;\mathcal{P}_\varepsilon)-L(f;\mathcal{P}_\varepsilon)<\varepsilon\]
+\end{theorem}
+
+\begin{corollary}
+	Let $I=[a,b]$ and let $f:I \to \R$ be a bounded function. If $\{P_n:n \in \N\}$ is a sequence of partitions on $I$ such that
+	\[\lim\limits_{n}(U(f;P_n)-L(f;P_n))=0,\]
+	then $f$ is integrable and $\lim\limits_{n}L(f;P_n)=\displaystyle\int_{a}^{b}f=\lim\limits_{n}U(f;P_n)$.
+\end{corollary}
+
+\begin{theorem}
+	If the function $f$ on the interval $I=[a,b]$ is either continuous or monotone on $I$, then $f$ is Darboux integrable on $I$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Equivalence Theorem}]
+	A function $f$ on $I=[a,b]$ is Darboux integrable if and only if it is Riemann integrable.
+\end{theorem}

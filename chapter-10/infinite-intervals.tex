@@ -1,0 +1,42 @@
+\section{Infinite Intervals}
+
+\begin{definition}
+	\begin{enumerate}
+		\item[]
+		\item A function $f:[a,\infty) \to \R$ is said to be  \textbf{generalized Riemann integrable} if there exists $A \in \R$ such that for every $\varepsilon>0$ there exists a gauge $\delta_\varepsilon$ on $[a,\infty]$ such that if $\dot{\mathcal{P}}$ is any $\delta_\varepsilon$-fine tagged subpartition of $[a,\infty)$, then $|S(f;\dot{\mathcal{P}})-A|\leq \varepsilon$. In this case, we write $f \in \mathcal{R}^*[a,\infty)$ and
+		      \[\displaystyle\int_{a}^{b}f:=A\]
+		\item A function $f:[a,\infty) \to \R$ is said to be \textbf{Lebesgue integrable} if both $f$ and $|f|$ belong to $\mathcal{R}^*[a,\infty)$. In this case we write $f \in \mathcal{L}[a,\infty)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}[\textbf{Hake's Theorem}]
+	If $f:[a,\infty) \to \R$, then $f \in \mathcal{R}^*[a,\infty)$ if and only if for every $\gamma \in (a,\infty)$ the restriction of $f$ to $[a,\gamma]$ belongs to $\mathcal{R}^*[a,\gamma]$ and
+	\[\lim\limits_{\gamma\to\infty}\displaystyle\int_{a}^{\gamma}f=A\in\R\]
+	In this case $\displaystyle\int_{a}^{\infty}f=A$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Fundamental Theorem}]
+	Suppose that $E$ is a countable subset of $[a,\infty)$ and that $f,F:[a,\infty)\to\R$ are such that:
+	\begin{enumerate}
+		\item $F$ is continuous on $[a,\infty)$ and $\lim\limits_{x \to \infty}F(x)$ exists.
+		\item $F'(x)=f(x)$ for all $x \in (a,\infty),\ x \notin E$.
+		      \\Then $f$ belongs to $\mathcal{R}^*[a,\infty)$ and
+		      \[\displaystyle\int_{a}^{\infty}f=\lim\limits_{x \to \infty}F(x)-F(a).\]
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Hake's Theorem}]
+	If $h:(-\infty,\infty)\to\R$, then $h \in \mathcal{R}^*(-\infty,\infty)$ if and only if for every $\beta < \gamma$ in $(-\infty, \infty)$, the restriction of $h$ to $[\beta,\gamma]$ is in $\mathcal{R}^*[\beta,\gamma]$ and
+	\[\lim\limits_{\substack{\beta \to -\infty \\ \gamma \to +\infty}}\displaystyle\int_{\beta}^{\gamma}h=C\in\R\]
+	In this case $\displaystyle\int_{-\infty}^{\infty}h=C$.
+\end{theorem}
+
+\begin{theorem}[\textbf{Fundamental Theorem}]
+	Suppose that $E$ is a countable subset of $(-\infty, \infty)$ and that $h,H:(-\infty,\infty)\to\R$ satisfy:
+	\begin{enumerate}
+		\item $H$ is continuous on $(-\infty, \infty)$ and the limits $\lim\limits_{x \to \pm \infty}H(x)$ exist.
+		\item $H'(x)=h(x)$ for all $x \in (-\infty, \infty),\ x \notin E$.
+	\end{enumerate}
+	Then $h$ belongs to $\mathcal{R}^*(-\infty,\infty)$ and
+	\[\displaystyle\int_{-\infty}^{\infty}h=\lim\limits_{x \to \infty} H(x)-\lim\limits_{\gamma \to -\infty}H(\gamma)\]
+\end{theorem}

@@ -1,0 +1,41 @@
+\section{Absolute Value and the Real Line}
+
+\begin{definition}
+	The \textbf{absolute value} of a real number $a$, denoted by $|a|$, is defined by
+	\[|a|:=\begin{cases}
+			a  & \text{if } a>0, \\
+			0  & \text{if } a=0, \\
+			-a & \text{if } a<0.
+		\end{cases}\]
+\end{definition}
+
+\begin{theorem}
+	\begin{enumerate}
+		\item[]
+		\item $|ab|=|a||b|$ for all $a,b \in \R$.
+		\item $|a|^2 = a^2$ for all $a \in \R$.
+		\item If $c \geq 0$, then $|a| \leq c$ if and only if $-c \leq a \leq c$.
+		\item $-|a|\leq a \leq |a|$ for all $a \in \R$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\textbf{Triangle Inequality}]
+	If $a,b \in \R$, then $|a+b| \leq |a| + |b|$.
+\end{theorem}
+
+\begin{corollary}
+	If $a,b \in \R$, then
+	\begin{enumerate}
+		\item $\left| |a|-|b| \right| \leq |a-b|$,
+		\item $|a-b| \leq |a| + |b|$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}
+	If $a_1, a_2, \dots, a_n$ are any real numbers, then
+	\[|a_1 + a_2 + \dots + a_n| \leq |a_1| + |a_2| + \dots + |a_n|\]
+\end{corollary}
+
+\begin{definition}
+	Let $a \in \R$ and $\varepsilon > 0$. Then the $\varepsilon$-\textbf{neighborhood} of $a$ is the set $V_\varepsilon(a):=\{x \in \R : |x-a| < \varepsilon\}$.
+\end{definition}
